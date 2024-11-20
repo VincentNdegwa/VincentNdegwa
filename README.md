@@ -1,10 +1,10 @@
-#👋 Hi there! I'm Vincent Ndegwa
+# 👋 Hi there! I'm Vincent Ndegwa
 🎓 Aspiring Software Engineer | Problem Solver | Lifelong Learner
 
-###🌟 About Me
+### 🌟 About Me
 I'm a passionate Software Engineering Student with hands-on experience in software development and quality assurance. I thrive on creating impactful, scalable solutions and exploring new technologies to improve systems and processes.
 
-###🔧 Tech Stack
+### 🔧 Tech Stack
 
 Frontend: Vue, React
 Backend: Laravel, Node.js, PHP
