@@ -1,5 +1,16 @@
-# 💫 About Me:
-I am a Software Engerineering student with passion in technology✨.<br>Very⚓ profecient in Front-End web development.🌍
+#👋 Hi there! I'm Vincent Ndegwa
+🎓 Aspiring Software Engineer | Problem Solver | Lifelong Learner
+
+###🌟 About Me
+I'm a passionate Software Engineering Student with hands-on experience in software development and quality assurance. I thrive on creating impactful, scalable solutions and exploring new technologies to improve systems and processes.
+
+###🔧 Tech Stack
+
+Frontend: Vue, React
+Backend: Laravel, Node.js, PHP
+Mobile Development: Kotlin, Java
+Databases: MySQL, MariaDB
+Other Tools: Postman, Git, Docker
 
 
 ## 🌐 Socials:
