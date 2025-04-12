@@ -7,9 +7,9 @@ I'm a passionate Software Engineering Student with hands-on experience in softwa
 ### 🔧 Tech Stack
 
 Frontend: Vue, React
-Backend: Laravel, Node.js, PHP
+Backend: Laravel, Django, Node.js, PHP
 Mobile Development: Kotlin, Java
-Databases: MySQL, MariaDB
+Databases: MySQL, MariaDB, SQLite
 Other Tools: Postman, Git, Docker
 
 
