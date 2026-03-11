@@ -1,0 +1,6 @@
+title: Paysoko ERP & POS Platform (NDA)
+description: Lead development on core modules of a multi-tenant ERP for Paysoko, handling high-concurrency POS data writes from multiple retail terminals. Optimized legacy MySQL queries reducing report generation time by 25%. Architected a modular reporting engine and streamlined production deployments with Docker and CI/CD pipelines.
+image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1470&auto=format&fit=crop&q=80
+url: "#"
+tags: ["Laravel", "MySQL", "Redis", "Docker", "CI/CD", "ERP", "Multi-tenant", "POS", "GitHub Actions"]
+date: "2024"

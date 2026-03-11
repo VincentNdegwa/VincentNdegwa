@@ -1,16 +1,14 @@
 ---
 title: "GitHub Actions CI/CD for Laravel: A Zero-Downtime Deployment Setup"
-description: Why designing digital experiences that encourage users to slow down
-  and engage deeply can lead to more meaningful interactions and better
-  outcomes.
+description: A practical walkthrough of atomic symlink deployments, parallel test pipelines, and one-command rollbacks using GitHub Actions and DigitalOcean.
 date: 2025-01-28
 image: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1260&auto=format&fit=crop&q=80
 minRead: 7
 author:
-  name: Vincent
+  name: Vincent Ndegwa
   avatar:
     src: https://media.licdn.com/dms/image/v2/D4D03AQH277wN5U3E6Q/profile-displayphoto-scale_400_400/B4DZoIDfnkG8Ag-/0/1761071732624?e=1775088000&v=beta&t=J9QjZYYVnIdtRmvPPuD1QGgOxxXh2Gtq0DIsm0puffY
-    alt: Vincent
+    alt: Vincent Ndegwa
 ---
 
 Every project I ship has a GitHub Actions pipeline. Not because it's fashionable, but because manually SSH-ing into a server and running `git pull` is a liability. Here's the exact setup I use for Laravel projects on DigitalOcean, with zero-downtime atomic deployments.

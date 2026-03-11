@@ -44,10 +44,12 @@ useSeoMeta({
           <UButton
             :label="page.links[0]?.label"
             :to="global.meetingLink"
+            target="_blank"
             v-bind="page.links[0]"
           />
           <UButton
             :to="`mailto:${global.email}`"
+            target="_blank"
             v-bind="page.links[1]"
           />
         </div>
@@ -69,7 +71,6 @@ useSeoMeta({
         <UPageCard
           :title="project.title"
           :description="project.description"
-          :to="project.url"
           orientation="horizontal"
           variant="naked"
           :reverse="index % 2 === 1"
@@ -84,16 +85,43 @@ useSeoMeta({
             </span>
           </template>
           <template #footer>
-            <ULink
-              :to="project.url"
-              class="text-sm text-primary flex items-center"
-            >
-              View Project
-              <UIcon
-                name="i-lucide-arrow-right"
-                class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
-              />
-            </ULink>
+            <div class="flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5">
+                <UBadge
+                  v-for="tag in project.tags"
+                  :key="tag"
+                  :label="tag"
+                  variant="subtle"
+                  color="primary"
+                  size="sm"
+                  class="font-mono text-xs"
+                />
+              </div>
+              <div class="flex items-center gap-4">
+                <ULink
+                  v-if="project.url && project.url !== '#'"
+                  :to="project.url"
+                  target="_blank"
+                  class="text-sm text-primary flex items-center gap-1"
+                >
+                  <UIcon name="i-lucide-external-link" class="size-4" />
+                  Live
+                </ULink>
+                <ULink
+                  v-if="project.repository"
+                  :to="project.repository"
+                  target="_blank"
+                  class="text-sm text-muted flex items-center gap-1 hover:text-primary transition-colors"
+                >
+                  <UIcon name="i-simple-icons-github" class="size-4" />
+                  GitHub
+                </ULink>
+                <span
+                  v-if="!project.repository && (!project.url || project.url === '#')"
+                  class="text-sm text-muted italic"
+                >NDA — available on request</span>
+              </div>
+            </div>
           </template>
           <img
             :src="project.image"

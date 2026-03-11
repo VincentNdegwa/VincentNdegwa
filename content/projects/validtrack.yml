@@ -1,0 +1,7 @@
+title: ValidTrack — Document Compliance & Expiry Engine
+description: Centralized compliance tracking system for insurance renewals and certification management. Uses Laravel Queues and Cron Jobs to scan thousands of records daily, sending automated alerts before documents expire. Cloud storage via DigitalOcean Spaces with real-time uptime monitoring using Nightwatch.
+image: /images/validtrack.png
+url: "https://validtrack-main-nrqwi2.laravel.cloud/"
+repository: "https://github.com/VincentNdegwa/validtrack"
+tags: ["Laravel", "Laravel Queues", "DigitalOcean Spaces", "Compliance", "Automation", "Nightwatch"]
+date: "2024"

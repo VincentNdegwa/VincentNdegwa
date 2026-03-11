@@ -1,6 +1,0 @@
-title: CRM Automation Suite
-description: Built a white-label CRM with automated follow-up sequences, lead scoring, and a built-in email template engine. The SaaS platform supports multiple client tenants with isolated databases. Includes a LangChain-powered AI assistant for drafting client responses.
-image: https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1470&auto=format&fit=crop&q=80
-url: "#"
-tags: ["Laravel", "Vue.js", "LangChain", "OpenAI", "Multi-tenant"]
-date: "2023"

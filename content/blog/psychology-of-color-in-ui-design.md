@@ -5,10 +5,10 @@ date: 2025-03-15
 image: https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1260&auto=format&fit=crop&q=80
 minRead: 5
 author:
-  name: Vincent
+  name: Vincent Ndegwa
   avatar:
     src: https://media.licdn.com/dms/image/v2/D4D03AQH277wN5U3E6Q/profile-displayphoto-scale_400_400/B4DZoIDfnkG8Ag-/0/1761071732624?e=1775088000&v=beta&t=J9QjZYYVnIdtRmvPPuD1QGgOxxXh2Gtq0DIsm0puffY
-    alt: Vincent
+    alt: Vincent Ndegwa
 ---
 
 When I started building the CRM Automation Suite, the initial tech discussion went exactly where most startup tech discussions go: "Should we use MongoDB? It's flexible."

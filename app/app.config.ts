@@ -23,7 +23,7 @@ export default defineAppConfig({
     }
   },
   footer: {
-    credits: `Vincent • Full-Stack Engineer © ${new Date().getFullYear()}`,
+    credits: `Vincent Ndegwa • Full-Stack Engineer & AI Researcher © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
       'icon': 'i-simple-icons-github',

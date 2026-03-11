@@ -47,8 +47,10 @@ export default defineContentConfig({
         about: createBaseSchema(),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
-            date: z.date(),
+            date: z.string(),
             position: z.string(),
+            location: z.string().optional(),
+            highlights: z.array(z.string()).optional(),
             company: z.object({
               name: z.string(),
               url: z.string(),
@@ -80,7 +82,8 @@ export default defineContentConfig({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
         image: z.string().nonempty().editor({ input: 'media' }),
-        url: z.string().nonempty(),
+        url: z.string().optional(),
+        repository: z.string().optional(),
         tags: z.array(z.string()),
         date: z.date()
       })

@@ -1,6 +1,0 @@
-title: LogiFlow — Real-Time Operations Dashboard
-description: Replaced a spreadsheet-based workflow with a real-time Nuxt dashboard backed by a Laravel API. Features live delivery tracking, automated PDF report generation, and a role-based access system. Cut operational overhead by ~6 hours per week.
-image: https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1470&auto=format&fit=crop&q=80
-url: "#"
-tags: ["Laravel", "Nuxt", "WebSockets", "PostgreSQL", "Docker"]
-date: "2023"

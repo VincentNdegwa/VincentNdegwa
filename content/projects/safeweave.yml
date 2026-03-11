@@ -1,0 +1,7 @@
+title: SafeWeave — Construction Safety & RAMS Platform
+description: Digitized site inductions, Risk Assessments (RAMS), and Toolbox Talks for high-risk construction environments. Features an approval-based document control system with full audit trails and Role-Based Access Control ensuring only certified safety officers can approve site RAMS.
+image: https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1470&auto=format&fit=crop&q=80
+url: "https://safeweave-main-jpsyxp.laravel.cloud/"
+repository: "https://github.com/VincentNdegwa/safeweave"
+tags: ["Laravel", "RBAC", "Audit Trail", "Document Control", "Compliance", "Safety"]
+date: "2024"

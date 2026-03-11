@@ -5,10 +5,10 @@ date: 2025-04-23
 image: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1260&auto=format&fit=crop&q=80
 minRead: 8
 author:
-  name: Vincent
+  name: Vincent Ndegwa
   avatar:
     src: https://media.licdn.com/dms/image/v2/D4D03AQH277wN5U3E6Q/profile-displayphoto-scale_400_400/B4DZoIDfnkG8Ag-/0/1761071732624?e=1775088000&v=beta&t=J9QjZYYVnIdtRmvPPuD1QGgOxxXh2Gtq0DIsm0puffY
-    alt: Vincent
+    alt: Vincent Ndegwa
 ---
 
 When I inherited the reporting module for a mid-sized ERP, the first thing I did was click "Generate Monthly Report" and wait. And wait. Thirty-two seconds later, a PDF appeared. With 50+ users all hitting that button at month-end, the server was begging for mercy.

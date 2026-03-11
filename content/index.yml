@@ -35,24 +35,51 @@ about:
 experience:
   title: Work Experience
   items:
-    - position: "Lead Full-Stack Engineer at"
-      date: "2024 - Present"
+    - position: "Software Developer — Laravel / ERP Systems"
+      date: "Jan 2025 – Present"
+      location: "Nairobi, Kenya"
+      highlights:
+        - "Optimised core ERP & POS platforms, driving a 25% improvement in system performance and reliability."
+        - "Built a scalable CRM reporting engine automating 10+ complex report templates with 100% data accuracy."
+        - "Architected high-availability, multi-tenant systems aligned with DDD and clean-code best practices."
+        - "Delivered production-ready features under tight deadlines using Laravel Queues, Redis, and Docker."
       company:
-        name: Paysoko
+        name: Paysoko Systems
         logo: "i-heroicons-building-storefront"
-        url: "#"
+        url: "https://paysoko.com"
         color: "#7c3aed"
-    - position: "Full-Stack Engineer at"
-      date: "2023 - 2024"
+    - position: "Software Developer — Django / Android"
+      date: "Jan 2025 – Present"
+      location: "Maryland, USA (Remote)"
+      highlights:
+        - "Designed and optimised high-performance RESTful Django APIs (MySQL), increasing data throughput by 30%."
+        - "Built production Android applications in Kotlin with seamless API integration and smooth UX."
+        - "Reduced bug-to-fix cycles with Postman API testing and Jira-driven agile workflows."
       company:
-        name: Freelance
-        logo: "i-heroicons-briefcase"
+        name: Forward Velocity
+        logo: "i-heroicons-globe-alt"
         url: "#"
         color: "#0ea5e9"
-    - position: "Software Engineering Intern at"
-      date: "2022 - 2023"
+    - position: "Software Quality Assurance Engineer"
+      date: "Apr 2024 – Nov 2024"
+      location: "Nairobi, Westlands"
+      highlights:
+        - "Led testing with Cypress and JUnit, ensuring 100% compliance across all major releases."
+        - "Identified and resolved 100+ critical bugs pre-production in collaboration with product managers."
+        - "Delivered detailed test reports enabling data-driven decision-making for senior stakeholders."
       company:
-        name: Kirinyaga University
+        name: Tenzi Africa
+        logo: "i-heroicons-shield-check"
+        url: "#"
+        color: "#10b981"
+    - position: "Software Engineer Intern"
+      date: "May 2023 – Oct 2023"
+      location: "Nairobi, Thika Rd"
+      highlights:
+        - "Maintained hospital management system modules using Laravel, Vue.js, PHP, and MySQL."
+        - "Integrated third-party payment gateway APIs to streamline patient data management workflows."
+      company:
+        name: Wise Digits
         logo: "i-heroicons-academic-cap"
         url: "#"
         color: "#f97316"

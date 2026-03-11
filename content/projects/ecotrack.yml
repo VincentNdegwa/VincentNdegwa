@@ -1,6 +1,0 @@
-title: StockSense — Predictive Inventory Dashboard
-description: Built a Django REST API and Nuxt dashboard that integrates an ML model to forecast stockouts up to 14 days in advance. Reduced client stockouts by 28% in the first quarter after launch. Deployed on GCP with GitHub Actions CI/CD.
-image: https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1470&auto=format&fit=crop&q=80
-url: "#"
-tags: ["Django", "Python", "Nuxt", "Machine Learning", "GCP"]
-date: "2024"

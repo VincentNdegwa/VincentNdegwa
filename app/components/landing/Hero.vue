@@ -111,6 +111,7 @@ defineProps<{
             variant="ghost"
             class="gap-2"
             :to="global.available ? global.meetingLink : ''"
+            target="_blank"
             :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
           >
             <template #leading>
