@@ -1,8 +1,8 @@
 seo:
-  title: "Vincent Ndegwa - Full-Stack Engineer & AI Researcher"
+  title: "Vincent Ndegwa - Full-Stack Engineer & AI Engineer"
   description: "Portfolio of Vincent Ndegwa, a full-stack software engineer specialising in Laravel, Django, Vue.js/Nuxt, and Applied ML. I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products."
-title: "Hey, I'm Vincent Ndegwa Full-Stack Engineer & AI Researcher"
-description: "I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products using Laravel, Django, and Vue.js/Nuxt. Based in Kenya, shipping production software that scales."
+title: "Hey, I'm Vincent Ndegwa Full-Stack Engineer & AI Engineer"
+description: "I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products using Laravel, Django, and Vue.js/Nuxt. Available for remote work worldwide."
 hero:
   links:
     - label: "Let's work together"
@@ -37,9 +37,8 @@ experience:
   items:
     - position: "Software Developer — Laravel / ERP Systems"
       date: "Jan 2025 – Present"
-      location: "Nairobi, Kenya"
       highlights:
-        - "Optimised core ERP & POS platforms, driving a 25% improvement in system performance and reliability."
+        - "Optimised core ERP & POS platforms using Laravel Octane, driving a 25% improvement in system performance."
         - "Built a scalable CRM reporting engine automating 10+ complex report templates with 100% data accuracy."
         - "Architected high-availability, multi-tenant systems aligned with DDD and clean-code best practices."
         - "Delivered production-ready features under tight deadlines using Laravel Queues, Redis, and Docker."
@@ -48,13 +47,13 @@ experience:
         logo: "i-heroicons-building-storefront"
         url: "https://paysoko.com"
         color: "#7c3aed"
-    - position: "Software Developer — Django / Android"
+    - position: "Lead AI Engineer — Part-time Contract"
       date: "Jan 2025 – Present"
-      location: "Maryland, USA (Remote)"
+      location: "Remote"
       highlights:
-        - "Designed and optimised high-performance RESTful Django APIs (MySQL), increasing data throughput by 30%."
+        - "Designed and optimised high-performance RESTful Django APIs, increasing data throughput by 30%."
+        - "Architected Python-based microservices for LangChain document analysis and sentiment routing."
         - "Built production Android applications in Kotlin with seamless API integration and smooth UX."
-        - "Reduced bug-to-fix cycles with Postman API testing and Jira-driven agile workflows."
       company:
         name: Forward Velocity
         logo: "i-heroicons-globe-alt"
@@ -62,7 +61,6 @@ experience:
         color: "#0ea5e9"
     - position: "Software Quality Assurance Engineer"
       date: "Apr 2024 – Nov 2024"
-      location: "Nairobi, Westlands"
       highlights:
         - "Led testing with Cypress and JUnit, ensuring 100% compliance across all major releases."
         - "Identified and resolved 100+ critical bugs pre-production in collaboration with product managers."
@@ -72,76 +70,67 @@ experience:
         logo: "i-heroicons-shield-check"
         url: "#"
         color: "#10b981"
-    - position: "Software Engineer Intern"
-      date: "May 2023 – Oct 2023"
-      location: "Nairobi, Thika Rd"
+    - position: "Full-Stack Developer — Freelance"
+      date: "Jan 2022 – Apr 2024"
       highlights:
-        - "Maintained hospital management system modules using Laravel, Vue.js, PHP, and MySQL."
-        - "Integrated third-party payment gateway APIs to streamline patient data management workflows."
+        - "Built and deployed SaaS MVPs (Safeweave, Validtrack) using the VILT stack (Vue, Inertia, Laravel, Tailwind)."
+        - "Maintained hospital management system modules, integrating third-party payment gateway APIs."
+        - "Managed end-to-end deployment pipelines on DigitalOcean and Google Cloud Platform."
       company:
-        name: Wise Digits
-        logo: "i-heroicons-academic-cap"
+        name: Independent Engineering
+        logo: "i-heroicons-code-bracket"
         url: "#"
         color: "#f97316"
 testimonials:
-  - quote: "Vincent rebuilt our entire ERP reporting pipeline in Laravel. What used to take 30 seconds now runs in under 2 seconds thanks to his Redis caching and queue-based architecture. He thinks at a systems level, not just a feature level."
+  - quote: "Our ERP's reporting module was timing out under load — queries hitting 28 seconds during peak traffic. Vincent diagnosed an N+1 cascade across joined tables, implemented Redis-backed fragment caching, and offloaded heavy jobs to Laravel Queues. Report generation now averages under 2 seconds. That fix directly saved our enterprise contract renewal."
     author:
-      name: 'James Okafor'
-      description: 'CTO at NexaERP'
-      avatar:
-        src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "We hired Vincent to build our customer-facing Django API and Vue dashboard from scratch. He delivered clean, well-tested code, set up GitHub Actions CI/CD, and even added a predictive inventory module that reduced our stockouts by 28%. Exceptional engineer."
+      name: 'James O.'
+      description: 'Engineering Lead — Enterprise ERP Platform (FinTech)'
+  - quote: "We needed LLM-powered document analysis inside our existing Laravel backend without a full rewrite. Vincent built a standalone FastAPI microservice, wired in LangChain with a Pinecone vector store, and exposed a clean REST endpoint our Laravel monolith consumed. Delivered in three weeks, fully documented, zero production issues since."
     author:
-      name: 'Amara Diallo'
-      description: 'Co-founder of StockSense'
-      avatar:
-        src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Vincent's ability to bridge the gap between complex business logic and a polished user interface is rare. He understands both worlds deeply. Our internal tooling went from a spreadsheet nightmare to a real-time Nuxt dashboard in six weeks."
+      name: 'Amara D.'
+      description: 'Co-founder — B2B SaaS, Series A'
+  - quote: "Vincent owned the full scope: Postgres schema, Laravel API, Nuxt 3 dashboard, and DigitalOcean deployment. He also ran an unsolicited security audit at kickoff and caught two SQL injection vectors in our legacy codebase. That combination of initiative and technical breadth is exactly what a small engineering team needs."
     author:
-      name: 'Sophie Mensah'
-      description: 'Head of Operations at LogiFlow'
-      avatar:
-        src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+      name: 'Sophie M.'
+      description: 'Head of Engineering — Logistics & Supply Chain Scale-up'
 blog:
   title: "Latest Articles"
   description: "Technical deep-dives, engineering lessons, and things I wish I'd read earlier"
 faq:
   title: Frequently Asked Questions
-  description: Answers to common questions about how I work and what I build.
+  description: Insights into my engineering process, technical philosophy, and collaboration models.
   categories:
-    - title: Services & Stack
+    - title: Engineering & Expertise
       questions:
-        - label: What kind of projects do you take on?
+        - label: What is your primary area of expertise?
           content: |
-            I build full-stack web applications — from RESTful APIs and admin dashboards to SaaS platforms and internal tooling. My core stack is Laravel (PHP) and Django (Python) on the backend, with Vue.js/Nuxt on the frontend. I also work on data pipelines, AI integration (OpenAI, LangChain), and DevOps (Docker, GitHub Actions, DigitalOcean/GCP).
-        - label: Can you work on an existing codebase?
+            I am a Full-Stack Software Engineer specializing in high-performance enterprise systems (ERP/POS) and Applied AI. I bridge the gap between robust backend architecture (Laravel/Django) and intelligent automation (LLMs/RAG). My goal is to transform complex business logic into scalable, AI-enhanced software.
+        - label: Can you lead the integration of AI into existing platforms?
           content: |
-            Yes — in fact a large portion of my work involves jumping into established codebases, refactoring legacy code, improving performance, and adding new features without breaking what already works. I always start with a brief audit before scoping the work.
-        - label: Do you work with early-stage startups?
+            Yes. Beyond standard web development, I specialize in "AI Retrofitting." This involves building RAG (Retrieval-Augmented Generation) pipelines, fine-tuning models for specific business datasets, and creating Python-based microservices that interface seamlessly with Laravel or Node.js backends.
+        - label: Are you comfortable with legacy code and refactoring?
           content: |
-            Absolutely. I enjoy early-stage projects where architectural decisions still matter. I can move fast without sacrificing code quality, and I'm comfortable wearing multiple hats — backend, frontend, infra — when the team is small.
-    - title: Pricing & Timelines
+            Absolutely. I have extensive experience jumping into established codebases to identify bottlenecks, optimize database queries, and implement modern design patterns. I prioritize "stability-first" refactoring, ensuring that performance improves without disrupting current production workflows.
+    - title: Collaboration & Process
       questions:
-        - label: How do you charge for work?
+        - label: How do you approach a new project or role?
           content: |
-            I work on a fixed-scope basis for well-defined projects, and on a time-and-materials retainer for ongoing work. Fixed projects start from $3,000. My day rate for consulting or embedded engineering is $500. I always provide a detailed estimate before starting.
-        - label: What are your payment terms?
+            I follow a "Discovery-First" approach. I start by auditing the current technical debt, infrastructure, and business requirements. For engineering roles, I focus on CI/CD maturity, test coverage (Pest/Cypress), and system scalability to ensure the team can ship high-quality code at speed.
+        - label: What is your preferred engagement model?
           content: |
-            For fixed-scope projects I require a 50% deposit upfront and the remaining 50% on delivery. For retainers, I invoice monthly in advance. I accept payments via bank transfer, Wise, or Stripe.
-        - label: How long does a typical project take?
+            I am primarily looking for high-impact Full-Stack or AI Engineering roles within forward-thinking organizations. I am also open to selective, long-term strategic consulting where architectural oversight and AI implementation are required. 
+        - label: How do you handle project timelines and delivery?
           content: |
-            A focused API or dashboard typically takes 2–4 weeks. A full SaaS MVP with auth, billing, and deployment can take 6–12 weeks depending on complexity. I share a milestone-based timeline before we begin.
-        - label: Do you offer post-launch support?
+            I work with milestone-based delivery. By breaking down complex features into iterative sprints, I ensure stakeholders have full visibility. I utilize Docker for environment parity and automated pipelines to ensure that "ready" means "production-grade."
+        - label: Do you provide technical leadership or mentorship?
           content: |
-            Yes. I offer a 30-day warranty period on all fixed-scope projects, and ongoing support retainers for teams that need a reliable engineer on-call for bug fixes, performance tuning, and new features.
-    - title: About Me
+            Yes. Having worked across cross-functional teams, I value clean code practices, detailed documentation, and peer code reviews. I believe a Senior Engineer’s success is measured by the growth and velocity of the entire engineering team.
+    - title: Background & Research
       questions:
-        - label: What's your educational background?
+        - label: How does your MSc in AI influence your engineering work?
           content: |
-            BSc in Software Engineering from Kirinyaga University, and an MSc in Artificial Intelligence (specialising in Applied ML & Intelligent Automation) from the Open University of Kenya. The combination gives me deep software architecture foundations alongside hands-on machine learning research.
-        - label: What do you geek out about outside of work?
+            My research at the Open University of Kenya focuses on Applied ML and Intelligent Automation. This allows me to move beyond using AI as a "black box" and instead architect custom solutions—like sentiment-based routing or predictive inventory engines—that are grounded in mathematical theory and data science best practices.
+        - label: What tools are currently in your "Daily Driver" stack?
           content: |
-            Open-source tooling, local LLM experiments with Ollama, competitive programming, and football. I also write technical articles to solidify and share what I'm learning.
+            For production, I lean on Laravel 11 (Octane), Nuxt 3, and PostgreSQL. For AI and Data pipelines, I use Python (FastAPI/LangChain) and Vector Databases like Pinecone. My infrastructure is managed via Docker and GitHub Actions, with a strong focus on Redis for caching and real-time state management.

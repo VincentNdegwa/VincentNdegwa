@@ -57,6 +57,28 @@ useSeoMeta({
           :index
         />
       </div>
+      <div class="flex flex-col items-center gap-4 py-8 border-t border-default mt-4">
+        <p class="text-sm text-muted text-center max-w-md">
+          Open to full-time roles, contract work, and interesting side projects. Let's build something worth shipping.
+        </p>
+        <div class="flex items-center gap-3 flex-wrap justify-center">
+          <UButton
+            label="Schedule a call"
+            icon="i-lucide-calendar"
+            :to="global.meetingLink"
+            target="_blank"
+            color="primary"
+          />
+          <UButton
+            label="Send an email"
+            icon="i-lucide-mail"
+            :to="`mailto:${global.email}`"
+            target="_blank"
+            color="neutral"
+            variant="outline"
+          />
+        </div>
+      </div>
     </UPageSection>
   </UPage>
 </template>

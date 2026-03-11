@@ -1,7 +1,7 @@
 title: About Me
-description: Full-stack engineer and AI researcher based in Kenya. I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products that solve real business problems at scale.
+description: Full-stack engineer and AI engineer available for remote work. I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products that solve real business problems at scale.
 content: |
-  Hey, I'm **Vincent Ndegwa**, a full-stack software engineer and AI researcher based in Kenya. I've spent the past 4+ years building production systems that real businesses depend on — from multi-tenant ERP platforms at Paysoko to open-source SaaS tools used by creators and enterprises globally.
+  Hey, I'm **Vincent Ndegwa**, a full-stack software engineer and AI engineer. I've spent the past 4+ years building production systems that real businesses depend on — from multi-tenant ERP platforms at Paysoko to open-source SaaS tools used by creators and enterprises globally.
 
   My backend home is **Laravel** and **Django**. My frontend of choice is **Vue.js and Nuxt 3**. I'm equally comfortable tuning MySQL query plans, wiring up WebSocket real-time pipelines with Laravel Reverb, or deploying containerised services to DigitalOcean and GCP.
 
