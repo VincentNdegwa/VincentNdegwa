@@ -1,27 +1,32 @@
 title: About Me
-description: Learn more about my journey as a Boston-based UX/UI Designer & Front-End Developer, my design philosophy, and my passion for crafting intuitive digital experiences.
+description: Full-stack engineer and AI researcher based in Kenya. I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products that solve real business problems at scale.
 content: |
-  Hi, I'm **Emma Thompson**, a UX/UI Designer and Front-End Developer based right here in Boston. For the past six years, I've been immersed in the world of digital product creation, focusing on building experiences that are not just functional, but genuinely intuitive and engaging for users.
+  Hey, I'm **Vincent Ndegwa**, a full-stack software engineer and AI researcher based in Kenya. I've spent the past 4+ years building production systems that real businesses depend on — from multi-tenant ERP platforms at Paysoko to open-source SaaS tools used by creators and enterprises globally.
 
-  My path started at **Boston University**, where I earned a degree in Interactive Design. It was there I discovered my dual passion for the visual language of design and the logical puzzle of code. Since then, I've honed my skills in both areas, believing that the best digital products are born from a deep understanding of both aesthetics and implementation.
+  My backend home is **Laravel** and **Django**. My frontend of choice is **Vue.js and Nuxt 3**. I'm equally comfortable tuning MySQL query plans, wiring up WebSocket real-time pipelines with Laravel Reverb, or deploying containerised services to DigitalOcean and GCP.
 
-  ### My Design Philosophy
+  ### The AI Thread
 
-  My design philosophy is rooted in **empathy** and **problem-solving**. I believe great design starts with understanding the 'why' – the user's needs, motivations, and pain points. I use research, iterative prototyping (often with tools like Figma), and user testing to ensure the solutions I build are truly effective.
+  I'm currently completing an **MSc in Artificial Intelligence** at the Open University of Kenya, specialising in Applied Machine Learning and Intelligent Automation. This isn't just academic — I've shipped a real NLP-powered sentiment analysis engine (Telliqo) and a collaborative filtering recommendation system for a retail client. My goal is to make AI a practical layer inside enterprise software, not a standalone demo.
 
-  I strive to create interfaces that feel effortless, where functionality and beauty work hand-in-hand. Whether I'm crafting pixel-perfect UIs or writing clean Vue.js/Nuxt.js code, my focus is always on creating value for the end-user.
+  ### Engineering Philosophy
 
-  ### What Drives Me
+  I believe in **clean architecture first**: service layers, repository patterns, proper test coverage. A system that's fast but impossible to change is a liability. I write code that the next engineer — or future-me — can understand and extend without fear.
 
-  What keeps me excited about this work is the constant learning and the challenge of translating complex ideas into simple, elegant solutions. There's nothing more rewarding than seeing a design come to life and knowing it's making someone's digital interaction easier or more enjoyable.
+  I take DevOps seriously too. Every project I ship has a **CI/CD pipeline** (GitHub Actions), Docker containerisation, and zero-downtime deployment strategies. Infrastructure is part of the product.
 
-  ### Beyond the Screen
+  ### Education
 
-  When I'm not designing or coding, you might find me exploring Boston's latest coffee shops, hiking nearby trails, or occasionally contributing to open-source projects.
+  - **MSc Artificial Intelligence** — Open University of Kenya *(in progress)*
+  - **BSc Software Engineering** — Kirinyaga University
 
-  Thanks for stopping by. Feel free to browse my [projects](/projects) or [get in touch](/#contact) if you'd like to collaborate!
+  ### Beyond the Terminal
+
+  When I'm not in a codebase, I'm experimenting with local LLMs via Ollama, following football, or writing technical articles to crystallise what I've learned.
+
+  Browse my [projects](/projects) or [get in touch](mailto:ndegwavincent7@gmail.com) — I'm always open to interesting problems.
 images:
-  - src: https://images.unsplash.com/photo-1744877478622-a78c7a3336f6?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My coffee workspace
-  - src: https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My trip to Tokyo
+  - src: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1587&auto=format&fit=crop&q=80
+    alt: Code on a dark terminal
+  - src: https://images.unsplash.com/photo-1518770660439-4636190af475?w=1587&auto=format&fit=crop&q=80
+    alt: Circuit board close-up

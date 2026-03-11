@@ -1,16 +1,67 @@
 ---
-title: The Psychology of Color in UI Design
-description: Exploring how strategic color choices can influence user behavior,
-  evoke emotions, and enhance the overall user experience of digital products.
+title: "Why I Chose PostgreSQL Over MongoDB for a CRM Reporting Engine"
+description: Exploring how strategic database choices impact query complexity, reporting accuracy, and long-term maintainability — and why relational won for this use case.
 date: 2025-03-15
-image: https://images.pexels.com/photos/40799/paper-colorful-color-loose-40799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+image: https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1260&auto=format&fit=crop&q=80
 minRead: 5
 author:
-  name: Emma Thompson
+  name: Vincent
   avatar:
-    src: https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: Emma Thompson
+    src: https://media.licdn.com/dms/image/v2/D4D03AQH277wN5U3E6Q/profile-displayphoto-scale_400_400/B4DZoIDfnkG8Ag-/0/1761071732624?e=1775088000&v=beta&t=J9QjZYYVnIdtRmvPPuD1QGgOxxXh2Gtq0DIsm0puffY
+    alt: Vincent
 ---
+
+When I started building the CRM Automation Suite, the initial tech discussion went exactly where most startup tech discussions go: "Should we use MongoDB? It's flexible."
+
+I've heard that argument many times. Flexibility is real, but it comes with a cost that only shows up later — usually when someone asks for their first non-trivial report.
+
+## The Flexibility Trap
+
+For a CRM, almost every interesting query involves *relationships*. Who are my top 10 clients by deal value this quarter, grouped by sales rep, filtered by lead source? That question is a JOIN. MongoDB can answer it, but you'll write an aggregation pipeline that looks like this:
+
+```js
+db.leads.aggregate([
+  { $match: { created_at: { $gte: startOfQuarter } } },
+  { $lookup: { from: 'deals', localField: '_id', foreignField: 'lead_id', as: 'deals' } },
+  { $unwind: '$deals' },
+  { $group: { _id: '$rep_id', total: { $sum: '$deals.value' } } },
+  { $sort: { total: -1 } },
+  { $limit: 10 }
+])
+```
+
+In PostgreSQL:
+
+```sql
+SELECT rep_id, SUM(d.value) AS total
+FROM leads l
+JOIN deals d ON d.lead_id = l.id
+WHERE l.created_at >= date_trunc('quarter', now())
+GROUP BY rep_id
+ORDER BY total DESC
+LIMIT 10;
+```
+
+The SQL is shorter, easier to review in a PR, and the query planner will optimise it efficiently with the right indexes.
+
+## Where Postgres Wins for CRMs
+
+**JSONB columns give you the flexibility you actually need.** Instead of going full document store, I used a `metadata JSONB` column on the contacts table for custom fields. You get the best of both worlds: structured joins where structure matters, and schemaless flexibility where it doesn't.
+
+**Window functions are a reporting superpower.** Calculating a rolling 30-day conversion rate per rep isn't something you want to do in application code:
+
+```sql
+SELECT rep_id,
+       date,
+       SUM(converted) OVER (PARTITION BY rep_id ORDER BY date ROWS 29 PRECEDING) AS rolling_conversions
+FROM daily_stats;
+```
+
+**Full-text search with `tsvector`** handled name and note searching without needing Elasticsearch for our scale.
+
+## The Verdict
+
+For a system where the data model has clear relationships and reporting is a first-class requirement, PostgreSQL is the right default. Save MongoDB for genuine document-centric problems — CMS content, event logs, product catalogues with wildly varying schemas. Don't reach for it because it *feels* modern.
 
 Color is one of the most powerful tools in my design arsenal, yet I find it's often reduced to mere aesthetics or brand guidelines. After conducting a series of A/B tests for the Wavelength music app redesign, I've gathered some fascinating insights about how color psychology directly impacts user behavior.
 

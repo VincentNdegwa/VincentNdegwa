@@ -1,6 +1,6 @@
-title: Bloom Finance App Redesign
-description: Led the complete UX/UI overhaul and front-end implementation for a personal finance platform, focusing on data visualization clarity and improving user onboarding flow. Resulted in a 32% increase in user retention.
-image: https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 # Example image of dashboards/finance app
+title: NexaERP — Enterprise Resource Planning Platform
+description: Architected and built a multi-tenant ERP system handling inventory, procurement, HR, and financial reporting for mid-sized businesses. Implemented Redis caching and Laravel Queues that cut report generation from 30s to under 2s.
+image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1470&auto=format&fit=crop&q=80
 url: "#"
-tags: ["UX Design", "UI Design"]
+tags: ["Laravel", "Vue.js", "MySQL", "Redis", "Docker"]
 date: "2024"

@@ -1,17 +1,89 @@
 ---
-title: "From Mockup to Market: My End-to-End Product Design Process"
-description: A detailed breakdown of my iterative design methodology, from
-  initial research to final handoff, with practical tips for designers at every
-  stage.
+title: "How I Cut Report Generation from 30s to 2s in Laravel"
+description: A practical walkthrough of how Redis caching, Laravel Queues, and careful query optimisation transformed a sluggish ERP reporting module into a near-instant one.
 date: 2025-04-23
-image: https://images.pexels.com/photos/1050312/pexels-photo-1050312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+image: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1260&auto=format&fit=crop&q=80
 minRead: 8
 author:
-  name: Emma Thompson
+  name: Vincent
   avatar:
-    src: https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: Emma Thompson
+    src: https://media.licdn.com/dms/image/v2/D4D03AQH277wN5U3E6Q/profile-displayphoto-scale_400_400/B4DZoIDfnkG8Ag-/0/1761071732624?e=1775088000&v=beta&t=J9QjZYYVnIdtRmvPPuD1QGgOxxXh2Gtq0DIsm0puffY
+    alt: Vincent
 ---
+
+When I inherited the reporting module for a mid-sized ERP, the first thing I did was click "Generate Monthly Report" and wait. And wait. Thirty-two seconds later, a PDF appeared. With 50+ users all hitting that button at month-end, the server was begging for mercy.
+
+Here's exactly how I fixed it.
+
+## The Diagnosis
+
+The first step was understanding *why* it was slow, not guessing. Laravel Telescope showed me the problem immediately: the report controller was firing **47 sequential database queries**, several of which were full table scans on a `transactions` table with 2.3 million rows.
+
+```php
+// The original sin — N+1 inside a loop
+foreach ($departments as $dept) {
+    $dept->transactions; // separate query per department
+}
+```
+
+## Fix 1: Eager Loading & Query Optimisation
+
+The first win was free. Switching to eager loading and adding a composite index on `(department_id, created_at)` dropped query time from ~18s to ~6s.
+
+```php
+// Before: 47 queries
+$departments = Department::all();
+
+// After: 2 queries
+$departments = Department::with([
+    'transactions' => fn($q) => $q->whereBetween('created_at', [$start, $end])
+])->get();
+```
+
+## Fix 2: Move Heavy Work Off the Request Cycle
+
+PDF generation was the remaining bottleneck. It had no business running synchronously inside an HTTP request. I moved it to a **Laravel Queue job** and returned an immediate response to the user.
+
+```php
+// Controller — returns instantly now
+public function generate(ReportRequest $request)
+{
+    $job = GenerateReportJob::dispatch($request->validated());
+    return response()->json(['status' => 'queued', 'job_id' => $job->id]);
+}
+```
+
+The frontend polls a `/reports/status/{id}` endpoint and shows a progress indicator until the download is ready.
+
+## Fix 3: Cache Expensive Aggregations with Redis
+
+Some numbers — like department totals for the current month so far — are read hundreds of times but only change when new transactions arrive. Redis was the obvious answer.
+
+```php
+$totals = Cache::tags(['reports', 'dept-'.$deptId])
+    ->remember('monthly-totals-'.$month, now()->addMinutes(15), function () use ($deptId, $month) {
+        return Transaction::where('department_id', $deptId)
+            ->whereMonth('created_at', $month)
+            ->selectRaw('SUM(amount) as total, COUNT(*) as count')
+            ->first();
+    });
+```
+
+When a new transaction is saved, the model's `saved` event fires a tagged cache invalidation — so the data is always fresh within 15 minutes, or immediately after a write.
+
+## The Result
+
+| Metric | Before | After |
+|---|---|---|
+| Report generation | 32s | 1.8s |
+| Peak request time | 32s | < 200ms |
+| Server CPU at month-end | ~90% | ~20% |
+
+The server stopped choking. Users stopped complaining. The client was happy.
+
+## Key Takeaway
+
+Never guess at performance problems. Profile first with Telescope or Debugbar, fix the actual bottleneck, then verify with numbers. In this case three targeted changes — eager loading, async queues, and Redis — were all it took.
 
 Creating successful digital products isn't about following a rigid formula—it's about developing a flexible framework that adapts to the unique challenges of each project. After refining my approach across dozens of products, I've developed a process that consistently delivers results while leaving room for creativity and iteration.
 

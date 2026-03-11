@@ -1,6 +1,6 @@
-title: Wavelength Music Streaming Service
-description: Designed and developed the user interface for an indie music streaming service, focusing on discovery features and creating a unique, engaging listening experience using custom audio visualizations.
-image: https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 # Example image related to music/audio
+title: CRM Automation Suite
+description: Built a white-label CRM with automated follow-up sequences, lead scoring, and a built-in email template engine. The SaaS platform supports multiple client tenants with isolated databases. Includes a LangChain-powered AI assistant for drafting client responses.
+image: https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1470&auto=format&fit=crop&q=80
 url: "#"
-tags: ["UI Design", "Front-End Dev", "Animation"]
+tags: ["Laravel", "Vue.js", "LangChain", "OpenAI", "Multi-tenant"]
 date: "2023"

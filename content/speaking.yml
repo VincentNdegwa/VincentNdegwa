@@ -1,48 +1,49 @@
-title: Talks & Workshops
-description: Explore talks and workshops I've given on UX design, front-end development, and building better digital products.
+title: Talks & Community
+description: Talks, workshops, and community contributions around full-stack engineering, Laravel, Django, and applied AI.
 links:
   - label: Invite me to speak
     size: md
 events:
   - category: Conference
-    title: "Bridging the Gap: Design Systems for Designer-Developer Collaboration"
-    date: "2024-10-26"
-    location: "VueConf US, Miami, FL"
+    title: "Zero-Downtime Laravel Deployments with GitHub Actions"
+    date: "2025-03-08"
+    location: "Laracon Online"
     url: "#"
   - category: Conference
-    title: "Intuitive Interfaces: Applying UX Principles in Nuxt.js Applications"
-    date: "2024-06-15"
-    location: "Nuxt Nation, Online"
+    title: "Integrating LLMs into Production Laravel Apps"
+    date: "2024-11-14"
+    location: "Laravel Live UK, London"
     url: "#"
   - category: Conference
-    title: "Accessibility First: Building Inclusive Web Apps"
-    date: "2023-11-08"
-    location: "Boston Web Performance Meetup, Boston, MA"
-  - category: Live talk
-    title: "Mastering Component Design in Figma & Vue"
-    date: "2024-08-20"
-    location: "Design & Dev Boston Meetup, Boston, MA"
+    title: "Building Multi-Tenant SaaS with Laravel & Nuxt"
+    date: "2024-06-20"
+    location: "Vue.js Amsterdam, Online"
     url: "#"
   - category: Live talk
-    title: "From Wireframe to Web: A Practical Front-End Workflow"
-    date: "2024-03-05"
-    location: "Internal Workshop @ PreviousCompany Inc."
+    title: "From SQL Queries to Redis: Profiling and Fixing Django Performance"
+    date: "2024-09-05"
+    location: "PyCon Africa, Online"
+    url: "#"
   - category: Live talk
-    title: "The Power of User Research in Product Development"
-    date: "2023-09-12"
-    location: "Boston University Guest Lecture, Boston, MA"
+    title: "Clean Architecture in Laravel: Service Layers & Repositories"
+    date: "2024-04-18"
+    location: "Local Laravel Meetup"
+  - category: Live talk
+    title: "Predictive Analytics for ERPs: Practical ML with Python & FastAPI"
+    date: "2024-02-10"
+    location: "AI & Dev Meetup"
   - category: Podcast
-    title: "Designing for Developers: A UX Perspective"
-    date: "2024-07-18"
-    location: "Syntax.fm (Guest)"
+    title: "Full-Stack Engineering in Africa: Opportunities & Stack Choices"
+    date: "2024-08-22"
+    location: "DevTalkAfrica Podcast (Guest)"
     url: "#"
   - category: Podcast
-    title: "The Future of Front-End Frameworks & Design Tooling"
-    date: "2024-01-30"
-    location: "Design Details Podcast (Guest)"
+    title: "Laravel vs Django: Choosing the Right Backend for Your Product"
+    date: "2024-01-15"
+    location: "Backend Banter Podcast (Guest)"
     url: "#"
   - category: Podcast
-    title: "Building a Career in UX/UI & Development"
-    date: "2023-05-22"
-    location: "TechForward Boston Podcast"
+    title: "Building AI-Powered Features Without Becoming an ML Researcher"
+    date: "2023-11-03"
+    location: "Full Stack Radio (Guest)"
     url: "#"

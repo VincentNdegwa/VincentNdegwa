@@ -1,16 +1,95 @@
 ---
-title: How I Built My Design System from Scratch
-description: A practical guide to creating your own design system, from initial
-  audit to implementation, and the lessons learned along the way.
+title: "Integrating LLMs into Laravel Using Python Microservices"
+description: A practical guide to wiring a LangChain Python service to a Laravel backend so you can add AI-powered features without abandoning your existing stack.
 date: 2025-03-05
-image: https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+image: https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1260&auto=format&fit=crop&q=80
 minRead: 6
 author:
-  name: Emma Thompson
+  name: Vincent
   avatar:
-    src: https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: Emma Thompson
+    src: https://media.licdn.com/dms/image/v2/D4D03AQH277wN5U3E6Q/profile-displayphoto-scale_400_400/B4DZoIDfnkG8Ag-/0/1761071732624?e=1775088000&v=beta&t=J9QjZYYVnIdtRmvPPuD1QGgOxxXh2Gtq0DIsm0puffY
+    alt: Vincent
 ---
+
+The CRM I built needed an AI assistant that could draft personalised follow-up emails based on a client's deal history. The business logic and data all lived in Laravel. The AI capabilities I wanted — LangChain, the OpenAI API, vector embeddings — live in the Python ecosystem.
+
+The answer wasn't to rewrite anything. It was a lightweight Python microservice that Laravel calls over HTTP.
+
+## The Architecture
+
+```
+Laravel App  →  HTTP POST /generate  →  FastAPI + LangChain  →  OpenAI API
+     ←  JSON response  ←
+```
+
+Laravel remains the source of truth. It handles auth, the database, and business logic. The Python service is stateless and only does one thing: take structured input and return AI-generated text.
+
+## The Python Service (FastAPI + LangChain)
+
+```python
+from fastapi import FastAPI
+from langchain_openai import ChatOpenAI
+from langchain.prompts import ChatPromptTemplate
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class EmailRequest(BaseModel):
+    client_name: str
+    deal_summary: str
+    rep_name: str
+
+@app.post("/generate/follow-up")
+def generate_follow_up(req: EmailRequest):
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", "You are a professional sales assistant. Write concise, friendly follow-up emails."),
+        ("human", "Draft a follow-up for {client_name}. Deal context: {deal_summary}. From: {rep_name}")
+    ])
+    chain = prompt | llm
+    result = chain.invoke(req.dict())
+    return {"email": result.content}
+```
+
+## Calling It from Laravel
+
+```php
+// app/Services/AiEmailService.php
+public function draftFollowUp(Contact $contact, Deal $deal, User $rep): string
+{
+    $response = Http::timeout(15)->post(
+        config('services.ai.base_url') . '/generate/follow-up',
+        [
+            'client_name'  => $contact->full_name,
+            'deal_summary' => $deal->summary,
+            'rep_name'     => $rep->name,
+        ]
+    );
+
+    return $response->throw()->json('email');
+}
+```
+
+`Http::throw()` ensures any non-2xx response triggers an exception that Laravel's exception handler can deal with cleanly.
+
+## Deployment
+
+Both services run in Docker containers behind an internal network. The Python service is **never exposed publicly** — only the Laravel app can reach it. This keeps the attack surface minimal.
+
+```yaml
+# docker-compose.yml (excerpt)
+services:
+  laravel:
+    networks: [app-network]
+  ai-service:
+    networks: [app-network]  # internal only, no ports exposed
+```
+
+## Lessons Learned
+
+- **Keep the service stateless.** No database, no sessions. Pure input → output.
+- **Set tight timeouts.** LLM calls can hang. 15s is generous; fail fast and show the user a graceful error.
+- **Cache aggressively.** Identical prompts return identical results. A quick Redis cache keyed on the input hash saves money and latency.
 
 After years of starting each project with a blank Figma file, I finally took the plunge and created my own comprehensive design system. The process was both challenging and incredibly rewarding, and I wanted to share my approach for other designers considering the same journey.
 
