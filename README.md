@@ -1,62 +1,92 @@
-# Nuxt Portfolio Template
+# 👋 Hi there! I'm Vincent Ndegwa  
+💻 Software Engineer | Full-Stack Developer
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+## 🌟 About Me  
+I am a passionate and results-oriented Software Engineer with hands-on experience in designing, developing, and maintaining scalable and efficient software systems. My expertise spans full-stack development, system architecture, and cross-platform applications. I am driven by solving real-world problems with clean, maintainable code and leveraging modern technologies to build impactful digital solutions. With a solid understanding of software engineering principles and a focus on performance and user experience, I consistently deliver high-quality solutions in fast-paced environments.
 
-Use this template to create your own portfolio with [Nuxt UI](https://ui.nuxt.com).
 
-- [Live demo](https://portfolio-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/getting-started/installation)
+## 💻 Tech Stack:
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png">
-    <img alt="Nuxt Portfolio Template" src="https://ui.nuxt.com/assets/templates/nuxt/portfolio-dark.png">
-  </picture>
-</a>
+### 🧠 Languages & Frameworks  
+<p align="left">
+  <img src="https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white" />
+  <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
+</p>
 
-## Quick Start
+### 🧩 Frameworks & Libraries  
+<p align="left">
+  <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/blade-%23F55247.svg?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/livewire-%230A0A0A.svg?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vue.js&logoColor=%234FC08D" />
+  <img src="https://img.shields.io/badge/react-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/pinia-%23ffe873.svg?style=for-the-badge&logo=pinia&logoColor=black" />
+  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+</p>
 
-```bash [Terminal]
-npm create nuxt@latest -- -t ui/portfolio
-```
+### 🗄️ Databases  
+<p align="left">
+  <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/mariadb-%23003545.svg?style=for-the-badge&logo=mariadb&logoColor=white" />
+  <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/mongodb-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white" />
+</p>
 
-## Deploy your own
+### ☁️ Cloud & Hosting  
+<p align="left">
+  <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase&logoColor=white" />
+  <img src="https://img.shields.io/badge/google%20cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/digitalocean-%230167ff.svg?style=for-the-badge&logo=digitalocean&logoColor=white" />
+  <img src="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white" />
+</p>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=portfolio&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fportfolio&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fportfolio-dark.png&demo-url=https%3A%2F%2Fportfolio-template.nuxt.dev%2F&demo-title=Nuxt%20Portfolio%20Template&demo-description=A%20sleek%20portfolio%20template%20to%20showcase%20your%20work%2C%20skills%20and%20blog%20powered%20by%20Nuxt%20Content.)
+### 🔧 Tools & DevOps  
+<p align="left">
+  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/postman-%23FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white" />
+  <img src="https://img.shields.io/badge/git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/cypress-%23172B4D.svg?style=for-the-badge&logo=cypress&logoColor=white" />
+  <img src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white" />
+</p>
 
-## Setup
+### 🎨 Design & OS  
+<p align="left">
+  <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+</p>
+ 
 
-Make sure to install the dependencies:
+Feel free to connect or collaborate on meaningful projects!
 
-```bash
-pnpm install
-```
 
-## Development Server
 
-Start the development server on `http://localhost:3000`:
+## 🌐 Socials:
+[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/7VMsnHJqdY) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/slumpy.teen) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/vincent-ndegwa-) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/vincentke_254) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/SWE_Vincent) 
 
-```bash
-pnpm dev
-```
 
-## Production
 
-Build the application for production:
 
-```bash
-pnpm build
-```
 
-Locally preview production build:
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=VincentNdegwa&theme=dark&hide_border=true&include_all_commits=false&count_private=true)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=VincentNdegwa&theme=dark&hide_border=true)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=VincentNdegwa&theme=dark&hide_border=true&include_all_commits=false&count_private=true&layout=compact)
+# 📊 GitHub Contribution:
+[![My Github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=VincentNdegwa&theme=github-compact&hide_border=true)](https://github.com/VincentNdegwa)
 
-```bash
-pnpm preview
-```
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=VincentNdegwa&theme=radical&no-frame=true&no-bg=false&margin-w=4)
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
-## Renovate integration
+---
+[![](https://visitcount.itsvg.in/api?id=VincentNdegwa&icon=0&color=0)](https://visitcount.itsvg.in)
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
