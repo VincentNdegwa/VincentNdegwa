@@ -22,46 +22,58 @@ useSeoMeta({
 
 <template>
   <UPage v-if="page">
-    <UPageHero
-      :title="page.title"
-      :description="page.description"
-      orientation="horizontal"
-      :ui="{
-        container: 'lg:flex sm:flex-row items-center',
-        title: '!mx-0 text-left',
-        description: '!mx-0 text-left',
-        links: 'justify-start'
-      }"
-    >
-      <UColorModeAvatar
-        class="sm:rotate-4 size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-        :light="global.picture?.light!"
-        :dark="global.picture?.dark!"
-        :alt="global.picture?.alt!"
-      />
-    </UPageHero>
-    <UPageSection
-      :ui="{
-        container: '!pt-0'
-      }"
-    >
-      <MDC
-        :value="page.content"
-        unwrap="p"
-      />
-      <div class="flex flex-row justify-center items-center py-10 space-x-[-2rem]">
-        <PolaroidItem
-          v-for="(image, index) in page.images"
-          :key="index"
-          :image="image"
-          :index
+    <!-- Custom header: split layout matching home page language -->
+    <section class="relative overflow-hidden py-14 sm:py-20">
+      <div class="dot-grid absolute inset-0 pointer-events-none" />
+      <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-10">
+        <!-- Left: text -->
+        <div class="flex flex-col gap-4 max-w-xl">
+          <p class="text-xs font-mono tracking-widest uppercase text-primary/70">
+            / about
+          </p>
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
+            {{ page.title }}
+          </h1>
+          <p class="text-sm sm:text-base text-muted leading-relaxed">
+            {{ page.description }}
+          </p>
+        </div>
+
+        <!-- Right: photo with glow -->
+        <div class="relative shrink-0">
+          <div class="absolute -inset-4 rounded-3xl bg-linear-to-br from-violet-500/20 via-indigo-500/10 to-transparent blur-2xl -z-10" />
+          <div class="relative rounded-2xl overflow-hidden ring-1 ring-default size-44 sm:size-52 bg-muted">
+            <img
+              :src="global.picture?.dark"
+              :alt="global.picture?.alt"
+              class="hidden dark:block w-full h-full object-cover"
+            >
+            <img
+              :src="global.picture?.light"
+              :alt="global.picture?.alt"
+              class="block dark:hidden w-full h-full object-cover"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content section -->
+    <section class="pb-20">
+      <!-- MDC prose content -->
+      <div class="prose prose-sm dark:prose-invert max-w-none">
+        <MDC
+          :value="page.content"
+          unwrap="p"
         />
       </div>
-      <div class="flex flex-col items-center gap-4 py-8 border-t border-default mt-4">
-        <p class="text-sm text-muted text-center max-w-md">
+
+      <!-- Contact CTA -->
+      <div class="flex flex-col items-start gap-4 pt-10 mt-10 border-t border-default">
+        <p class="text-sm text-muted max-w-md">
           Open to full-time roles, contract work, and interesting side projects. Let's build something worth shipping.
         </p>
-        <div class="flex items-center gap-3 flex-wrap justify-center">
+        <div class="flex items-center gap-3 flex-wrap">
           <UButton
             label="Schedule a call"
             icon="i-lucide-calendar"
@@ -79,6 +91,6 @@ useSeoMeta({
           />
         </div>
       </div>
-    </UPageSection>
+    </section>
   </UPage>
 </template>
