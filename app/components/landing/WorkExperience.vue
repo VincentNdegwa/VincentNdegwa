@@ -36,7 +36,10 @@ defineProps<{
                 class="size-4 shrink-0"
                 :style="{ color: experience.company.color }"
               />
-              <span class="font-semibold text-sm" :style="{ color: experience.company.color }">
+              <span
+                class="font-semibold text-sm"
+                :style="{ color: experience.company.color }"
+              >
                 {{ experience.company.name }}
               </span>
             </ULink>
@@ -46,19 +49,31 @@ defineProps<{
           </div>
           <div class="flex flex-col items-end gap-0.5 shrink-0">
             <span class="text-xs text-muted font-mono">{{ experience.date }}</span>
-            <span v-if="experience.location" class="text-xs text-muted flex items-center gap-1">
-              <UIcon name="i-lucide-map-pin" class="size-3" />
+            <span
+              v-if="experience.location"
+              class="text-xs text-muted flex items-center gap-1"
+            >
+              <UIcon
+                name="i-lucide-map-pin"
+                class="size-3"
+              />
               {{ experience.location }}
             </span>
           </div>
         </div>
-        <ul v-if="experience.highlights?.length" class="flex flex-col gap-1 mt-1">
+        <ul
+          v-if="experience.highlights?.length"
+          class="flex flex-col gap-1 mt-1"
+        >
           <li
             v-for="(point, pi) in experience.highlights"
             :key="pi"
             class="text-xs text-muted flex items-start gap-2"
           >
-            <UIcon name="i-lucide-chevron-right" class="size-3 mt-0.5 shrink-0 text-primary" />
+            <UIcon
+              name="i-lucide-chevron-right"
+              class="size-3 mt-0.5 shrink-0 text-primary"
+            />
             {{ point }}
           </li>
         </ul>

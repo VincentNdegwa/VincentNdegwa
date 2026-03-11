@@ -110,8 +110,15 @@ const labelColor: Record<string, string> = {
         :class="cat.bg"
       >
         <div class="flex items-center gap-2">
-          <UIcon :name="cat.icon" class="size-5" :class="cat.color" />
-          <span class="font-semibold text-sm" :class="cat.color">{{ cat.title }}</span>
+          <UIcon
+            :name="cat.icon"
+            class="size-5"
+            :class="cat.color"
+          />
+          <span
+            class="font-semibold text-sm"
+            :class="cat.color"
+          >{{ cat.title }}</span>
         </div>
 
         <div
@@ -120,7 +127,10 @@ const labelColor: Record<string, string> = {
           class="flex flex-col gap-2"
         >
           <div class="flex items-center gap-2">
-            <span class="text-xs font-medium uppercase tracking-wide" :class="labelColor[group.label] || 'text-muted'">
+            <span
+              class="text-xs font-medium uppercase tracking-wide"
+              :class="labelColor[group.label] || 'text-muted'"
+            >
               {{ group.label }}
             </span>
             <span class="text-xs text-muted">· {{ group.hint }}</span>

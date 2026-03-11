@@ -53,7 +53,9 @@ const stats = [
           :transition="{ duration: 0.5, delay: 0.2 }"
         >
           <div>
-            <p class="text-xs font-mono tracking-widest uppercase text-primary/70 mb-2">— hello, I'm</p>
+            <p class="text-xs font-mono tracking-widest uppercase text-primary/70 mb-2">
+              — hello, I'm
+            </p>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
               <span class="text-highlighted">Vincent</span>
               <br>
@@ -142,7 +144,6 @@ const stats = [
               class="block dark:hidden w-full h-full object-cover"
             >
           </div>
-      
         </div>
 
         <!-- Stats 2×2 grid -->

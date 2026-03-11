@@ -117,7 +117,10 @@ useSeoMeta({
                   target="_blank"
                   class="text-sm text-primary flex items-center gap-1.5 hover:underline"
                 >
-                  <UIcon name="i-lucide-external-link" class="size-3.5" />
+                  <UIcon
+                    name="i-lucide-external-link"
+                    class="size-3.5"
+                  />
                   Live
                 </ULink>
                 <ULink
@@ -126,7 +129,10 @@ useSeoMeta({
                   target="_blank"
                   class="text-sm text-muted flex items-center gap-1.5 hover:text-primary transition-colors"
                 >
-                  <UIcon name="i-simple-icons-github" class="size-3.5" />
+                  <UIcon
+                    name="i-simple-icons-github"
+                    class="size-3.5"
+                  />
                   GitHub
                 </ULink>
                 <span
