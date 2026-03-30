@@ -6,7 +6,7 @@ defineProps<{
 }>()
 
 const stats = [
-  { value: '4+', label: 'Years building production systems' },
+  { value: '6+', label: 'Years building production systems' },
   { value: '6+', label: 'Shipped projects — SaaS, ERP & AI' },
   { value: 'MSc', label: 'Artificial Intelligence (in progress)' }
 ]

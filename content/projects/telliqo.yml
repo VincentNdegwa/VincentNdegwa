@@ -1,5 +1,5 @@
 title: Telliqo — AI-Powered Reputation Management
-description: Sentiment analysis platform that intercepts negative reviews before they go public. An NLP pipeline categorises customer feedback in real-time — positive reviews are routed to Google/Yelp, negative ones to a private dashboard. Automated SMS/Email nudges triple review collection rates.
+description: NLP-driven sentiment analysis engine built with Laravel and OpenAI to automate customer feedback classification. Routes negative sentiment to internal dashboards and positive sentiment to public review channels, reducing manual processing time by 40 minutes per batch.
 image: /images/telliqo.png
 url: "https://telliqo-main-9crnhf.laravel.cloud/"
 repository: "https://github.com/VincentNdegwa/telliqo"

@@ -8,7 +8,7 @@ const categories = [
     groups: [
       {
         label: 'Expert',
-        hint: '4+ yrs · architect systems from scratch',
+        hint: '6+ yrs · architect systems from scratch',
         skills: ['Laravel', 'PHP', 'Django', 'Python', 'REST API Design', 'MySQL']
       },
       {
@@ -31,7 +31,7 @@ const categories = [
     groups: [
       {
         label: 'Expert',
-        hint: '4+ yrs · SSR, SPA, component systems',
+        hint: '6+ yrs · SSR, SPA, component systems',
         skills: ['Vue.js 3', 'Nuxt 3', 'TypeScript', 'Tailwind CSS']
       },
       {

@@ -1,30 +1,34 @@
 title: About Me
-description: Full-stack engineer and AI engineer available for remote work. I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products that solve real business problems at scale.
+description: Senior software engineer with 6+ years of experience building scalable web and AI-powered systems across ERP, FinTech, and SaaS.
 content: |
-  Hey, I'm **Vincent Ndegwa**, a full-stack software engineer and AI engineer. I've spent the past 4+ years building production systems that real businesses depend on — from multi-tenant ERP platforms at Paysoko to open-source SaaS tools used by creators and enterprises globally.
+  Hey, I'm **Vincent Ndegwa**, a Senior Software Engineer focused on Full-Stack and AI systems. I have 6+ years of experience building production software used by teams in retail, finance, and creator-economy platforms.
 
-  My backend home is **Laravel** and **Django**. My frontend of choice is **Vue.js and Nuxt 3**. I'm equally comfortable tuning MySQL query plans, wiring up WebSocket real-time pipelines with Laravel Reverb, or deploying containerised services to DigitalOcean and GCP.
+  My core backend stack includes **PHP (Laravel)**, **Node.js (NestJS/Express)**, and **Python (FastAPI/Django)**. On the frontend, I build with **React (Next.js)** and **Vue (Nuxt)**. I specialize in modernizing legacy platforms into high-performance microservices, optimizing database performance, and shipping reliable APIs at scale.
+
+  At Paysoko Systems, I have led architecture for a multi-tenant ERP and POS platform, optimized high-volume MySQL reporting pipelines, and delivered payment workflows with **Stripe** and **Stripe Connect** for split payments and subscriptions.
 
   ### The AI Thread
 
-  I'm currently completing an **MSc in Artificial Intelligence** at the Open University of Kenya, specialising in Applied Machine Learning and Intelligent Automation. This isn't just academic — I've shipped a real NLP-powered sentiment analysis engine (Telliqo) and a collaborative filtering recommendation system for a retail client. My goal is to make AI a practical layer inside enterprise software, not a standalone demo.
+  I hold an **MSc in Artificial Intelligence (2023-2025)** from the Open University of Kenya. My AI work includes NLP pipelines, LLM orchestration, RAG-enabled systems, and predictive analytics applied to production business workflows.
+
+  This is practical engineering, not experimentation for its own sake: I have built sentiment analysis engines, recommendation systems, and AI-driven process automation that reduce manual effort and improve operational speed.
 
   ### Engineering Philosophy
 
-  I believe in **clean architecture first**: service layers, repository patterns, proper test coverage. A system that's fast but impossible to change is a liability. I write code that the next engineer — or future-me — can understand and extend without fear.
+  I believe in **clean architecture first**: explicit service boundaries, testable modules, and observability from day one. A system that performs well but cannot evolve safely is a long-term risk.
 
-  I take DevOps seriously too. Every project I ship has a **CI/CD pipeline** (GitHub Actions), Docker containerisation, and zero-downtime deployment strategies. Infrastructure is part of the product.
+  I take DevOps seriously too. The systems I ship include **Dockerized environments**, **CI/CD pipelines**, and robust release practices designed for distributed teams and high-availability requirements.
 
   ### Education
 
-  - **MSc Artificial Intelligence** — Open University of Kenya *(in progress)*
+  - **MSc Artificial Intelligence** — Open University of Kenya *(2023-2025)*
   - **BSc Software Engineering** — Kirinyaga University
 
   ### Beyond the Terminal
 
   When I'm not in a codebase, I'm experimenting with local LLMs via Ollama, following football, or writing technical articles to crystallise what I've learned.
 
-  Browse my [projects](/projects) or [get in touch](mailto:ndegwavincent7@gmail.com) — I'm always open to interesting problems.
+  Browse my [projects](/projects) or [get in touch](mailto:vincentndegwa.dev@gmail.com) — I'm always open to interesting problems.
 images:
   - src: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1587&auto=format&fit=crop&q=80
     alt: Code on a dark terminal

@@ -11,18 +11,22 @@ author:
     alt: Vincent Ndegwa
 ---
 
-Every project I ship has a GitHub Actions pipeline. Not because it's fashionable, but because manually SSH-ing into a server and running `git pull` is a liability. Here's the exact setup I use for Laravel projects on DigitalOcean, with zero-downtime atomic deployments.
+I have seen great Laravel features fail for one simple reason: deployment was fragile. The code was correct, but release day was stressful because the process relied on manual SSH steps and luck.
 
-## The Goal
+This is the setup I now use to make releases boring, predictable, and reversible.
 
-- Push to `main` → tests run → if green, deploy automatically
-- No downtime during deployment
-- Rollback in one command if something goes wrong
+## Deployment Requirements
 
-## The Workflow File
+- test and deploy from GitHub Actions
+- no downtime for users
+- rollback in under one minute
+- same approach works for Laravel, Django, and FastAPI services
+
+## CI Pipeline First
+
+Every push to main triggers tests. Deploy only runs if tests pass.
 
 ```yaml
-# .github/workflows/deploy.yml
 name: Deploy
 
 on:
@@ -46,55 +50,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1
+      - uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
-          script: |
-            cd /var/www/releases
-            git clone git@github.com:you/app.git $(date +%Y%m%d%H%M%S)
-            cd $(ls -t | head -1)
-            composer install --no-dev --optimize-autoloader
-            cp /var/www/shared/.env .env
-            php artisan migrate --force
-            php artisan config:cache && php artisan route:cache
-            ln -sfn /var/www/releases/$(ls -t /var/www/releases | head -1) /var/www/current
-            sudo systemctl reload php8.4-fpm
-            # Keep only the last 5 releases
-            ls -t /var/www/releases | tail -n +6 | xargs -I{} rm -rf /var/www/releases/{}
+          script: /var/www/scripts/deploy.sh
 ```
 
-## How Zero-Downtime Works
+## Atomic Release Strategy
 
-The key is the **atomic symlink swap**: Nginx serves `/var/www/current`, which is a symlink. The new release is fully built in a timestamped directory *before* the symlink is updated. The swap (`ln -sfn`) is a single atomic filesystem operation — requests in flight finish against the old release, new requests immediately use the new one.
+The server keeps timestamped releases:
 
-## Rollback
+- /var/www/releases/20260330114500
+- /var/www/releases/20260330121810
+- /var/www/current -> symlink to active release
 
-If something breaks:
+New code is prepared in a fresh folder. Only after migrations, cache warmup, and health checks pass do we switch the symlink.
 
 ```bash
-# On the server — point current at the previous release
+ln -sfn /var/www/releases/$RELEASE /var/www/current
+sudo systemctl reload php8.4-fpm
+```
+
+The symlink change is atomic, so active requests complete safely while new requests hit the new release.
+
+## Rollback Procedure
+
+If health checks fail after deploy:
+
+```bash
 PREV=$(ls -t /var/www/releases | sed -n '2p')
 ln -sfn /var/www/releases/$PREV /var/www/current
 sudo systemctl reload php8.4-fpm
 ```
 
-Done. Previous version is live in seconds.
+No panic, no patching in production. Just revert, recover, and inspect logs.
 
-## Secrets Management
+## Secrets and Environment Safety
 
-Never commit `.env`. The shared `.env` lives at `/var/www/shared/.env` on the server and is copied into each release. GitHub Secrets store the SSH key and host details — they're never in the repo.
+- keep .env outside release folders
+- inject secrets via GitHub encrypted secrets
+- never expose internal AI services directly to the public network
 
-I recently took on a project that challenged everything about my usual design process. A small literary journal wanted a digital platform that encouraged readers to slow down and engage deeply with content—the exact opposite of most websites optimized for quick consumption.
+## Why This Matters for AI Features Too
 
-This got me thinking about what I'm calling "slow design"—an approach that intentionally creates space for contemplation rather than rapid interaction.
+If your Laravel app depends on FastAPI AI services, release reliability matters even more. Coordinated deploys and quick rollback protect both your core product and AI flows.
 
-For the Wordsmith Journal, I experimented with subtle animations that respond to reading pace, typography that encourages focus, and navigation that reveals content gradually rather than all at once. The result feels more like turning pages in a physical book than scrolling through a typical website.
-
-User testing revealed something fascinating: readers spent 3x longer with articles and reported higher satisfaction and better recall of content compared to the journal's previous site. By designing for attention rather than distraction, we created a digital experience that honors the thoughtful nature of the content itself.
-
-I'm now incorporating elements of slow design into all my projects, asking: "Where can we create moments of pause? How can we reward attention rather than just capturing it?"
-
-In our rush to optimize for engagement metrics, I think we've forgotten that sometimes the most meaningful digital experiences are the ones that don't demand immediate action but instead create space for thought.
+A stable CI/CD system is not just DevOps polish. It is product reliability, customer trust, and engineering sanity.

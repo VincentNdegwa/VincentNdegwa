@@ -11,26 +11,21 @@ author:
     alt: Vincent Ndegwa
 ---
 
-When I started building the CRM Automation Suite, the initial tech discussion went exactly where most startup tech discussions go: "Should we use MongoDB? It's flexible."
+When teams build CRMs, database choice usually starts with opinions and trends. I prefer to start with the kinds of questions the business will ask six months later.
 
-I've heard that argument many times. Flexibility is real, but it comes with a cost that only shows up later — usually when someone asks for their first non-trivial report.
+In this case, those questions looked like this:
 
-## The Flexibility Trap
+- Which sales rep closed the highest value deals this quarter?
+- Which lead source has the best conversion rate by region?
+- Which pipeline stage is slowing down revenue?
 
-For a CRM, almost every interesting query involves *relationships*. Who are my top 10 clients by deal value this quarter, grouped by sales rep, filtered by lead source? That question is a JOIN. MongoDB can answer it, but you'll write an aggregation pipeline that looks like this:
+These are relationship heavy queries. That shaped the decision.
 
-```js
-db.leads.aggregate([
-  { $match: { created_at: { $gte: startOfQuarter } } },
-  { $lookup: { from: 'deals', localField: '_id', foreignField: 'lead_id', as: 'deals' } },
-  { $unwind: '$deals' },
-  { $group: { _id: '$rep_id', total: { $sum: '$deals.value' } } },
-  { $sort: { total: -1 } },
-  { $limit: 10 }
-])
-```
+## Why PostgreSQL Won
 
-In PostgreSQL:
+MongoDB is excellent for document heavy workloads. A CRM reporting engine is not one of them. Most critical reports involve joins, strict consistency, and aggregate functions.
+
+In PostgreSQL, the query intent stays clear:
 
 ```sql
 SELECT rep_id, SUM(d.value) AS total
@@ -42,43 +37,44 @@ ORDER BY total DESC
 LIMIT 10;
 ```
 
-The SQL is shorter, easier to review in a PR, and the query planner will optimise it efficiently with the right indexes.
+This is easy to review, tune, and explain to another engineer during handover.
 
-## Where Postgres Wins for CRMs
+## Flexibility Without Chaos
 
-**JSONB columns give you the flexibility you actually need.** Instead of going full document store, I used a `metadata JSONB` column on the contacts table for custom fields. You get the best of both worlds: structured joins where structure matters, and schemaless flexibility where it doesn't.
+One argument for document databases is custom fields. PostgreSQL already handles this well with JSONB.
 
-**Window functions are a reporting superpower.** Calculating a rolling 30-day conversion rate per rep isn't something you want to do in application code:
+```sql
+ALTER TABLE contacts ADD COLUMN metadata JSONB;
+CREATE INDEX idx_contacts_metadata ON contacts USING GIN (metadata);
+```
+
+You keep a normalized core schema and still support tenant specific fields safely.
+
+## Reporting Features That Matter in Production
+
+PostgreSQL gave us three practical wins:
+
+- window functions for rolling conversion trends
+- materialized views for expensive dashboards
+- full text search with tsvector for notes and lead history
+
+Example rolling metric:
 
 ```sql
 SELECT rep_id,
-       date,
-       SUM(converted) OVER (PARTITION BY rep_id ORDER BY date ROWS 29 PRECEDING) AS rolling_conversions
-FROM daily_stats;
+       day,
+       SUM(conversions) OVER (
+         PARTITION BY rep_id
+         ORDER BY day
+         ROWS BETWEEN 29 PRECEDING AND CURRENT ROW
+       ) AS rolling_30_day_conversions
+FROM rep_daily_metrics;
 ```
 
-**Full-text search with `tsvector`** handled name and note searching without needing Elasticsearch for our scale.
+## What Changed After the Migration
 
-## The Verdict
+- report generation became faster and more predictable
+- query debugging got easier for the whole team
+- schema evolution became deliberate instead of ad hoc
 
-For a system where the data model has clear relationships and reporting is a first-class requirement, PostgreSQL is the right default. Save MongoDB for genuine document-centric problems — CMS content, event logs, product catalogues with wildly varying schemas. Don't reach for it because it *feels* modern.
-
-Color is one of the most powerful tools in my design arsenal, yet I find it's often reduced to mere aesthetics or brand guidelines. After conducting a series of A/B tests for the Wavelength music app redesign, I've gathered some fascinating insights about how color psychology directly impacts user behavior.
-
-When we initially launched the app, we used a vibrant purple as our primary action color. The color looked great with our brand palette, but our conversion metrics were underwhelming. On a hunch, I proposed testing different primary colors while keeping all other elements identical.
-
-The results were striking: switching to a specific shade of blue increased our call-to-action conversion by 34%. Even more interesting was how different user segments responded to color variations—younger users engaged more with vibrant tones, while our 35+ demographic showed stronger preference for more subdued colors.
-
-Beyond conversion metrics, I discovered that color significantly affected how users perceived waiting times. By implementing a softer color progression in our loading animations, users reported that the app felt faster, even though the actual loading times remained unchanged.
-
-I've since developed a framework for color decision-making that goes beyond aesthetics:
-
-1. Consider the emotional response you want to evoke
-2. Test color choices with your specific user demographics
-3. Use color to create visual hierarchies that guide users naturally
-4. Consider cultural associations of colors for international audiences
-5. Ensure sufficient contrast for readability and accessibility
-
-The most valuable lesson I've learned is that there are no universal "right" colors—only colors that effectively communicate your message and guide users toward their goals within your specific context.
-
-Next time you're selecting a color palette, think beyond what looks good and consider what your colors are actually saying to your users.
+The bigger lesson: choose storage based on query shape and reliability needs, not hype. For Laravel, Django, and FastAPI backends that power analytics heavy products, PostgreSQL is often the better default.
