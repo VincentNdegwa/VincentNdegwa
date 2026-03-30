@@ -8,7 +8,7 @@ defineProps<{
 }>()
 
 const stats = [
-  { value: '4+', label: 'Years Exp.' },
+  { value: '6+', label: 'Years Exp.' },
   { value: '6+', label: 'Projects' },
   { value: '2', label: 'Domains' },
   { value: 'MSc', label: 'AI Eng.' }

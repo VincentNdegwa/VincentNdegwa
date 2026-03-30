@@ -1,8 +1,8 @@
 seo:
-  title: "Vincent Ndegwa - Full-Stack Engineer & AI Engineer"
-  description: "Portfolio of Vincent Ndegwa, a full-stack software engineer specialising in Laravel, Django, Vue.js/Nuxt, and Applied ML. I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products."
-title: "Hey, I'm Vincent Ndegwa Full-Stack Engineer & AI Engineer"
-description: "I build high-availability ERPs, FinTech platforms, and AI-powered SaaS products using Laravel, Django, React and Vue.js/Nuxt. Available for remote work worldwide."
+  title: "Vincent Ndegwa - Senior Software Engineer (Full-Stack & AI Systems)"
+  description: "Portfolio of Vincent Ndegwa, a senior software engineer with 6+ years of experience building scalable web and AI-powered systems using Laravel, NestJS, FastAPI, Next.js, and Nuxt."
+title: "Hey, I'm Vincent Ndegwa Senior Software Engineer (Full-Stack & AI Systems)"
+description: "I modernize legacy platforms into high-performance microservices and AI-powered products using Laravel, Node.js (NestJS/Express), Python (FastAPI/Django), React (Next.js), and Vue (Nuxt)."
 hero:
   links:
     - label: "Let's work together"
@@ -30,70 +30,54 @@ hero:
 about:
   title: "About Me"
   description: |
-    Full-stack engineer with 4+ years of experience building high-availability ERPs, FinTech platforms, and AI-powered SaaS products. My core stack is Laravel & Django on the backend, Vue.js/Nuxt on the frontend, backed by MySQL, PostgreSQL, and Redis.
-    Currently completing an MSc in Artificial Intelligence, specialising in Applied ML and Intelligent Automation. I bring AI from research into real products people use every day.
+    Senior software engineer with 6+ years of experience building scalable web and AI-powered systems. I specialize in Laravel, NestJS, FastAPI, React/Next.js, and Vue/Nuxt, with strong focus on microservices, performance optimization, and production reliability.
+    I integrate LLMs, RAG pipelines, and automation into business-critical software to deliver measurable outcomes across ERP, FinTech, and SaaS platforms.
 experience:
   title: Work Experience
   items:
-    - position: "Software Developer — Laravel / ERP Systems"
-      date: "Jan 2025 – Present"
+    - position: "Senior Software Engineer"
+      date: "Feb 2024 – Present"
+      location: "USA (Remote)"
       highlights:
-        - "Optimised core ERP & POS platforms using Laravel Octane, driving a 25% improvement in system performance."
-        - "Built a scalable CRM reporting engine automating 10+ complex report templates with 100% data accuracy."
-        - "Architected high-availability, multi-tenant systems aligned with DDD and clean-code best practices."
-        - "Delivered production-ready features under tight deadlines using Laravel Queues, Redis, and Docker."
+        - "Led development of a multi-tenant POS and ERP platform handling high-concurrency writes from 100+ retail terminals simultaneously."
+        - "Optimized complex MySQL execution plans, reducing report generation latency from minutes to seconds in large-scale workflows."
+        - "Implemented Stripe and Stripe Connect payment flows for marketplace-style split payments and subscription billing across ERP commerce modules."
+        - "Integrated AI-powered analytics for predictive inventory insights and automated business data categorization."
+        - "Containerized the application ecosystem with Docker and established CI/CD pipelines in GitHub Actions for stable, high-frequency releases."
+        - "Built compliance and document tracking engines with Laravel Queues processing 10k+ daily records with real-time alerting."
       company:
         name: Paysoko Systems
         logo: "i-heroicons-building-storefront"
         url: "https://paysoko.com"
         color: "#7c3aed"
-    - position: "Lead AI Engineer — Part-time Contract"
-      date: "Jan 2025 – Present"
-      location: "Remote"
+    - position: "Senior Full-Stack & AI Lead"
+      date: "Nov 2021 – Jan 2024"
+      location: "USA (Remote)"
       highlights:
-        - "Designed and optimised high-performance RESTful Django APIs, increasing data throughput by 30%."
-        - "Architected Python-based microservices for LangChain document analysis and sentiment routing."
-        - "Built production Android applications in Kotlin with seamless API integration and smooth UX."
+        - "Architected an NLP-driven sentiment analysis engine using Laravel and OpenAI, reducing manual feedback processing by 40 minutes per batch."
+        - "Transitioned legacy services to NestJS and implemented a high-performance API gateway, reducing API response times by 150ms."
+        - "Developed an escrow-backed payment system supporting 5,000+ monthly transactions using Node.js and WebSockets."
+        - "Engineered a personalized grocery recommendation engine with Python and Django that scaled to 10k+ concurrent users during peak load."
+        - "Directed AI-driven internal automation workflows that reduced operational overhead by 20 hours per week."
+        - "Led architecture scoping and planning with cross-functional teams to deliver resilient software systems."
       company:
         name: Forward Velocity
         logo: "i-heroicons-globe-alt"
         url: "#"
         color: "#0ea5e9"
-    - position: "Software Quality Assurance Engineer"
-      date: "Apr 2024 – Nov 2024"
+    - position: "Full-Stack Developer (Independent Contractor)"
+      date: "Jan 2020 – Oct 2021"
+      location: "San Francisco, USA (Remote)"
       highlights:
-        - "Led testing with Cypress and JUnit, ensuring 100% compliance across all major releases."
-        - "Identified and resolved 100+ critical bugs pre-production in collaboration with product managers."
-        - "Delivered detailed test reports enabling data-driven decision-making for senior stakeholders."
+        - "Shipped 10+ production-ready applications for a technical consultancy focused on rapid-growth startup ventures."
+        - "Built high-performance, SEO-optimized frontends with React and Next.js for client-facing platforms."
+        - "Developed data-intensive backends using Django and FastAPI to deliver high throughput and efficient retrieval."
+        - "Implemented rigorous TDD practices and automated Playwright UI tests, achieving 95% code coverage across critical modules."
       company:
-        name: Tenzi Africa
-        logo: "i-heroicons-shield-check"
-        url: "#"
-        color: "#10b981"
-    - position: "Full-Stack Developer — Freelance"
-      date: "Jan 2022 – Apr 2024"
-      highlights:
-        - "Built and deployed SaaS MVPs (Safeweave, Validtrack) using the VILT stack (Vue, Inertia, Laravel, Tailwind)."
-        - "Maintained hospital management system modules, integrating third-party payment gateway APIs."
-        - "Managed end-to-end deployment pipelines on DigitalOcean and Google Cloud Platform."
-      company:
-        name: Independent Engineering
-        logo: "i-heroicons-code-bracket"
+        name: StackLogic Inc.
+        logo: "i-heroicons-code-bracket-square"
         url: "#"
         color: "#f97316"
-testimonials:
-  - quote: "Our ERP's reporting module was timing out under load — queries hitting 28 seconds during peak traffic. Vincent diagnosed an N+1 cascade across joined tables, implemented Redis-backed fragment caching, and offloaded heavy jobs to Laravel Queues. Report generation now averages under 2 seconds. That fix directly saved our enterprise contract renewal."
-    author:
-      name: 'James O.'
-      description: 'Engineering Lead — Enterprise ERP Platform (FinTech)'
-  - quote: "We needed LLM-powered document analysis inside our existing Laravel backend without a full rewrite. Vincent built a standalone FastAPI microservice, wired in LangChain with a Pinecone vector store, and exposed a clean REST endpoint our Laravel monolith consumed. Delivered in three weeks, fully documented, zero production issues since."
-    author:
-      name: 'Amara D.'
-      description: 'Co-founder — B2B SaaS, Series A'
-  - quote: "Vincent owned the full scope: Postgres schema, Laravel API, Nuxt 3 dashboard, and DigitalOcean deployment. He also ran an unsolicited security audit at kickoff and caught two SQL injection vectors in our legacy codebase. That combination of initiative and technical breadth is exactly what a small engineering team needs."
-    author:
-      name: 'Sophie M.'
-      description: 'Head of Engineering — Logistics & Supply Chain Scale-up'
 blog:
   title: "Latest Articles"
   description: "Technical deep-dives, engineering lessons, and things I wish I'd read earlier"

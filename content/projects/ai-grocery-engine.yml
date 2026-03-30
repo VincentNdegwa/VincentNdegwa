@@ -1,5 +1,5 @@
 title: AI Grocery Recommendation Engine (NDA)
-description: Personalized shopping experience for a retail client using Python/Django and Collaborative Filtering ML. Suggested products based on historical user behaviour. Optimized the Django REST API to handle a 30% increase in data throughput during peak hours, with real-time inventory sync between MySQL backend and React frontend.
+description: Personalized retail recommendation engine built with Python, Django, and Scikit-Learn using collaborative filtering models. Delivered product suggestions from historical behavior data and scaled API performance to support 10k+ concurrent users with real-time inventory synchronization between MySQL and React clients.
 image: /images/ai-grocery-engine.png
 url: "#"
 tags: ["Django", "Python", "Machine Learning", "Collaborative Filtering", "REST API", "React", "MySQL", "Scikit-Learn"]

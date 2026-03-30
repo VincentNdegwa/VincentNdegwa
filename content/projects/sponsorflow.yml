@@ -1,7 +1,7 @@
 title: SponsorFlow — Creator Economy Operating System
-description: Escrow-backed payment platform for global brand-creator partnerships. Built with Laravel Reverb WebSockets for real-time collaboration, multi-gateway FinTech integration (Stripe, Paystack, Flutterwave), and Livewire for a seamless SPA-like experience.
+description: Escrow-backed creator economy platform built for real-time brand-creator collaboration. Architected Stripe Connect split-payment flows, recurring billing logic, and multi-gateway FinTech integrations (Stripe, Paystack, Flutterwave) with Laravel Reverb WebSockets and Livewire.
 image: /images/sponsorflow.png
 url: "https://sponsorflow-main-vbgrny.laravel.cloud/"
 repository: "https://github.com/VincentNdegwa/sponsoflow"
-tags: ["Laravel", "Livewire", "WebSockets", "Stripe", "Paystack", "Flutterwave", "FinTech", "Escrow"]
+tags: ["Laravel", "Livewire", "WebSockets", "Stripe", "Stripe Connect", "Paystack", "Flutterwave", "FinTech", "Escrow"]
 date: "2024"
