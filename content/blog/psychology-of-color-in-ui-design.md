@@ -7,7 +7,7 @@ minRead: 5
 author:
   name: Vincent Ndegwa
   avatar:
-    src: https://media.licdn.com/dms/image/v2/D4D03AQH277wN5U3E6Q/profile-displayphoto-scale_400_400/B4DZoIDfnkG8Ag-/0/1761071732624?e=1775088000&v=beta&t=J9QjZYYVnIdtRmvPPuD1QGgOxxXh2Gtq0DIsm0puffY
+    src: /personal/profile.jpeg
     alt: Vincent Ndegwa
 ---
 
