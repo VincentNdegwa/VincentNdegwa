@@ -6,7 +6,7 @@
   
   **Building intelligent systems & scalable applications**
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vincent-ndegwa-)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vincentndegwa01)
   [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/SWE_Vincent)
   [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/7VMsnHJqdY)
   
@@ -98,24 +98,15 @@ I care about code quality, performance, and shipping things that actually solve 
 
 ### GitHub Overview
 
-<div align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=VincentNdegwa&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VincentNdegwa&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=VincentNdegwa&theme=tokyonight&hide_border=true" />
-</div>
-
-<br/>
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=VincentNdegwa&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</p>
 
 ### Let’s Connect
 
 Open to collaborations, interesting AI + software projects, and conversations about building intelligent systems.
 
-[LinkedIn](https://linkedin.com/in/vincent-ndegwa-) · [X / Twitter](https://twitter.com/SWE_Vincent) · [Discord](https://discord.gg/7VMsnHJqdY)
+[LinkedIn](https://www.linkedin.com/in/vincentndegwa01) · [X / Twitter](https://twitter.com/SWE_Vincent) · [Discord](https://discord.gg/7VMsnHJqdY)
 
 <br/>
 
