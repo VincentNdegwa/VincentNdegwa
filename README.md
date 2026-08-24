@@ -1,92 +1,124 @@
-# 👋 Hi there! I'm Vincent Ndegwa  
-💻 Software Engineer | Full-Stack Developer
+<div align="center">
+  
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e293b,100:0f172a&height=160&section=header&text=Vincent%20Ndegwa&fontSize=42&fontColor=e2e8f0&animation=fadeIn&fontAlignY=35" width="100%"/>
 
-## 🌟 About Me  
-I am a passionate and results-oriented Software Engineer with hands-on experience in designing, developing, and maintaining scalable and efficient software systems. My expertise spans full-stack development, system architecture, and cross-platform applications. I am driven by solving real-world problems with clean, maintainable code and leveraging modern technologies to build impactful digital solutions. With a solid understanding of software engineering principles and a focus on performance and user experience, I consistently deliver high-quality solutions in fast-paced environments.
+  ### Software Engineer · AI Engineer
+  
+  **Building intelligent systems & scalable applications**
 
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vincent-ndegwa-)
+  [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/SWE_Vincent)
+  [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/7VMsnHJqdY)
+  
+</div>
 
-## 💻 Tech Stack:
+<br/>
 
-### 🧠 Languages & Frameworks  
+### About
+
+I’m a **Software Engineer** and **AI Engineer** who turns complex problems into clean, maintainable systems.
+
+I work across the full stack — solid backends, modern frontends, and infrastructure — while building production **AI-powered features**: RAG pipelines, agentic workflows, LLM orchestration, and retrieval systems.
+
+I care about code quality, performance, and shipping things that actually solve real problems.
+
+<br/>
+
+### Currently Focused On
+
+- Production RAG systems & agentic workflows  
+- LangChain / LangGraph tooling & LLM orchestration  
+- Vector databases & advanced retrieval strategies  
+- Bridging traditional software engineering with modern AI systems
+
+<br/>
+
+### Tech Stack
+
+#### AI & LLM Engineering
+
 <p align="left">
-  <img src="https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white" />
-  <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" />
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+  <img src="https://img.shields.io/badge/LlamaIndex-8B5CF6?style=for-the-badge&logo=llamaindex&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Anthropic-D4A27F?style=for-the-badge&logo=anthropic&logoColor=black" />
+  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" />
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" />
 </p>
 
-### 🧩 Frameworks & Libraries  
+**Core AI Concepts**  
+`RAG` · `Agents` · `Prompt Engineering` · `Function Calling` · `Structured Outputs` · `Tool Use`
+
+**Vector Stores & Retrieval**  
 <p align="left">
-  <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/blade-%23F55247.svg?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/livewire-%230A0A0A.svg?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vue.js&logoColor=%234FC08D" />
-  <img src="https://img.shields.io/badge/react-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/pinia-%23ffe873.svg?style=for-the-badge&logo=pinia&logoColor=black" />
-  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white" />
+  <img src="https://img.shields.io/badge/Weaviate-00C8C8?style=for-the-badge&logo=weaviate&logoColor=white" />
+  <img src="https://img.shields.io/badge/Chroma-FF6B6B?style=for-the-badge&logo=chroma&logoColor=white" />
+  <img src="https://img.shields.io/badge/FAISS-0055FF?style=for-the-badge&logo=meta&logoColor=white" />
+  <img src="https://img.shields.io/badge/pgvector-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
 </p>
-
-### 🗄️ Databases  
-<p align="left">
-  <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/mariadb-%23003545.svg?style=for-the-badge&logo=mariadb&logoColor=white" />
-  <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" />
-  <img src="https://img.shields.io/badge/mongodb-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white" />
-</p>
-
-### ☁️ Cloud & Hosting  
-<p align="left">
-  <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase&logoColor=white" />
-  <img src="https://img.shields.io/badge/google%20cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" />
-  <img src="https://img.shields.io/badge/digitalocean-%230167ff.svg?style=for-the-badge&logo=digitalocean&logoColor=white" />
-  <img src="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white" />
-</p>
-
-### 🔧 Tools & DevOps  
-<p align="left">
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/postman-%23FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white" />
-  <img src="https://img.shields.io/badge/git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/cypress-%23172B4D.svg?style=for-the-badge&logo=cypress&logoColor=white" />
-  <img src="https://img.shields.io/badge/selenium-%2343B02A.svg?style=for-the-badge&logo=selenium&logoColor=white" />
-</p>
-
-### 🎨 Design & OS  
-<p align="left">
-  <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-</p>
- 
-
-Feel free to connect or collaborate on meaningful projects!
-
-
-
-## 🌐 Socials:
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/7VMsnHJqdY) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/slumpy.teen) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/vincent-ndegwa-) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/vincentke_254) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/SWE_Vincent) 
-
-
-
-
-
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=VincentNdegwa&theme=dark&hide_border=true&include_all_commits=false&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=VincentNdegwa&theme=dark&hide_border=true)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=VincentNdegwa&theme=dark&hide_border=true&include_all_commits=false&count_private=true&layout=compact)
-# 📊 GitHub Contribution:
-[![My Github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=VincentNdegwa&theme=github-compact&hide_border=true)](https://github.com/VincentNdegwa)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=VincentNdegwa&theme=radical&no-frame=true&no-bg=false&margin-w=4)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=VincentNdegwa&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+#### Languages
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,typescript,javascript,kotlin,java,php" />
+</p>
+
+#### Backend & Frameworks
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=django,laravel,nodejs,fastapi" />
+  <img src="https://img.shields.io/badge/Livewire-FB70A9?style=for-the-badge&logo=laravel&logoColor=white" />
+</p>
+
+#### Frontend
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=react,vue,pinia,ts" />
+</p>
+
+#### Databases & Caching
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis,sqlite" />
+</p>
+
+#### Infrastructure & Tools
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=docker,nginx,git,firebase,gcp,postman,linux" />
+  <img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white" />
+</p>
+
+<br/>
+
+### GitHub Overview
+
+<div align="center">
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=VincentNdegwa&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VincentNdegwa&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=VincentNdegwa&theme=tokyonight&hide_border=true" />
+</div>
+
+<br/>
+
+### Let’s Connect
+
+Open to collaborations, interesting AI + software projects, and conversations about building intelligent systems.
+
+[LinkedIn](https://linkedin.com/in/vincent-ndegwa-) · [X / Twitter](https://twitter.com/SWE_Vincent) · [Discord](https://discord.gg/7VMsnHJqdY)
+
+<br/>
+
+<!-- <div align="center">
+  <img src="https://komarev.com/ghpvc/?username=VincentNdegwa&style=flat-square&color=0e75b6" alt="Profile views" />
+</div> -->
