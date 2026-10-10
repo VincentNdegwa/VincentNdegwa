@@ -23,7 +23,9 @@ export default defineNuxtConfig({
       routes: [
         '/'
       ],
-      crawlLinks: true
+      crawlLinks: true,
+      // The Vercel image optimizer only exists at runtime; the crawler finds it via image preload links.
+      ignore: ['/_vercel/image']
     }
   },
 
