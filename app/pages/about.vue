@@ -21,76 +21,50 @@ useSeoMeta({
 </script>
 
 <template>
-  <UPage v-if="page">
-    <!-- Custom header: split layout matching home page language -->
-    <section class="relative overflow-hidden py-14 sm:py-20">
-      <div class="dot-grid absolute inset-0 pointer-events-none" />
-      <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-10">
-        <!-- Left: text -->
-        <div class="flex flex-col gap-4 max-w-xl">
-          <p class="text-xs font-mono tracking-widest uppercase text-primary/70">
-            / about
-          </p>
-          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
+  <div v-if="page">
+    <section class="wrap pt-10 pb-14 sm:pt-16 sm:pb-20">
+      <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:gap-16">
+        <Reveal
+          on-load
+          class="flex flex-col gap-6"
+        >
+          <h1 class="text-[clamp(44px,6vw,88px)] font-semibold leading-[1.05] tracking-[-0.03em] text-ink [font-stretch:82%]">
             {{ page.title }}
           </h1>
-          <p class="text-sm sm:text-base text-muted leading-relaxed">
+          <p class="max-w-[46ch] text-[clamp(18px,1.6vw,22px)] leading-relaxed text-ink-2">
             {{ page.description }}
           </p>
-        </div>
-
-        <!-- Right: photo with glow -->
-        <div class="relative shrink-0">
-          <div class="absolute -inset-4 rounded-3xl bg-linear-to-br from-violet-500/20 via-indigo-500/10 to-transparent blur-2xl -z-10" />
-          <div class="relative rounded-2xl overflow-hidden ring-1 ring-default size-44 sm:size-52 bg-muted">
-            <img
-              :src="global.picture?.dark"
-              :alt="global.picture?.alt"
-              class="hidden dark:block w-full h-full object-cover"
-            >
-            <img
-              :src="global.picture?.light"
-              :alt="global.picture?.alt"
-              class="block dark:hidden w-full h-full object-cover"
-            >
-          </div>
-        </div>
+        </Reveal>
+        <Reveal
+          as="figure"
+          on-load
+          :delay="0.12"
+          class="w-full max-w-[380px] justify-self-center lg:justify-self-end"
+        >
+          <NuxtImg
+            :src="global.picture.light"
+            :alt="global.picture.alt"
+            width="760"
+            height="950"
+            fit="cover"
+            class="aspect-[4/5] w-full rounded-3xl bg-surface-2 object-cover object-[50%_30%]"
+          />
+        </Reveal>
       </div>
     </section>
 
-    <!-- Content section -->
-    <section class="pb-20">
-      <!-- MDC prose content -->
-      <div class="prose prose-sm dark:prose-invert max-w-none">
+    <section class="wrap pb-20 sm:pb-28">
+      <Reveal class="prose-vn mx-auto max-w-[68ch] border-t border-line-strong pt-10">
         <MDC
           :value="page.content"
           unwrap="p"
         />
-      </div>
-
-      <!-- Contact CTA -->
-      <div class="flex flex-col items-start gap-4 pt-10 mt-10 border-t border-default">
-        <p class="text-sm text-muted max-w-md">
-          Open to full-time roles, contract work, and interesting side projects. Let's build something worth shipping.
-        </p>
-        <div class="flex items-center gap-3 flex-wrap">
-          <UButton
-            label="Schedule a call"
-            icon="i-lucide-calendar"
-            :to="global.meetingLink"
-            target="_blank"
-            color="primary"
-          />
-          <UButton
-            label="Send an email"
-            icon="i-lucide-mail"
-            :to="`mailto:${global.email}`"
-            target="_blank"
-            color="neutral"
-            variant="outline"
-          />
-        </div>
-      </div>
+      </Reveal>
     </section>
-  </UPage>
+
+    <LandingContact
+      title="Let's build something that scales."
+      description="Open to senior engineering roles, contracts and AI product work."
+    />
+  </div>
 </template>

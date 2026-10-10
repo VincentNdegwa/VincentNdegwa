@@ -7,80 +7,67 @@ defineProps<{
 </script>
 
 <template>
-  <UPageSection
-    :title="page.experience.title"
-    :ui="{
-      container: '!p-0 gap-4 sm:gap-4',
-      title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium'
-    }"
+  <section
+    id="experience"
+    class="wrap scroll-mt-24 pb-20 sm:pb-28 lg:pb-36"
   >
-    <div class="flex flex-col gap-5 mt-2">
-      <Motion
-        v-for="(experience, index) in page.experience.items"
-        :key="index"
-        :initial="{ opacity: 0, transform: 'translateY(20px)' }"
-        :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
-        :transition="{ delay: 0.15 + 0.15 * index }"
-        :in-view-options="{ once: true }"
-        class="rounded-xl border border-default p-4 flex flex-col gap-2"
-      >
-        <div class="flex items-start justify-between gap-2 flex-wrap">
-          <div class="flex flex-col gap-0.5">
-            <ULink
-              :to="experience.company.url !== '#' ? experience.company.url : undefined"
-              :target="experience.company.url !== '#' ? '_blank' : undefined"
-              class="flex items-center gap-1.5"
-            >
-              <UIcon
-                :name="experience.company.logo"
-                class="size-4 shrink-0"
-                :style="{ color: experience.company.color }"
-              />
-              <span
-                class="font-semibold text-sm"
-                :style="{ color: experience.company.color }"
-              >
-                {{ experience.company.name }}
-              </span>
-            </ULink>
-            <p class="text-sm font-medium text-highlighted">
-              {{ experience.position }}
-            </p>
-          </div>
-          <div class="flex flex-col items-end gap-0.5 shrink-0">
-            <span class="text-xs text-muted font-mono">{{ experience.date }}</span>
-            <span
-              v-if="experience.location"
-              class="text-xs text-muted flex items-center gap-1"
-            >
-              <UIcon
-                name="i-lucide-map-pin"
-                class="size-3"
-              />
-              {{ experience.location }}
-            </span>
-          </div>
-        </div>
-        <ul
-          v-if="experience.highlights?.length"
-          class="flex flex-col gap-1 mt-1"
-        >
-          <li
-            v-for="(point, pi) in experience.highlights"
-            :key="pi"
-            class="text-xs text-muted flex items-start gap-2"
-          >
-            <UIcon
-              name="i-lucide-chevron-right"
-              class="size-3 mt-0.5 shrink-0 text-primary"
-            />
-            {{ point }}
-          </li>
-        </ul>
-      </Motion>
-    </div>
-  </UPageSection>
-</template>
+    <SectionHeading
+      :title="page.experience.title"
+      :highlight="page.experience.highlight"
+      :description="page.experience.description"
+    />
 
-<style scoped>
-</style>
+    <ol class="border-t border-line-strong pt-8">
+      <Reveal
+        v-for="(item, index) in page.experience.items"
+        :key="`${item.position}-${item.date}`"
+        as="li"
+        :delay="0.05 * index"
+        class="grid gap-1.5 pb-10 last:pb-0 md:grid-cols-[minmax(0,2fr)_minmax(0,4fr)_minmax(0,6fr)] md:gap-10"
+      >
+        <p
+          class="pt-1.5 font-mono text-sm"
+          :class="item.current ? 'font-medium text-accent' : 'text-ink-3'"
+        >
+          {{ item.date }}
+        </p>
+        <div>
+          <h3 class="text-[22px] font-semibold tracking-[-0.01em] text-ink">
+            {{ item.position }}
+          </h3>
+          <NuxtLink
+            v-if="item.company.url"
+            :to="item.company.url"
+            target="_blank"
+            rel="noopener"
+            class="mt-1 inline-block text-[15px] text-ink-3 underline-offset-4 hover:text-accent hover:underline"
+          >
+            {{ item.company.name }}
+          </NuxtLink>
+          <p
+            v-else
+            class="mt-1 text-[15px] text-ink-3"
+          >
+            {{ item.company.name }}
+          </p>
+        </div>
+        <p class="mt-2 text-base leading-relaxed text-ink-2 md:mt-0">
+          {{ item.summary }}
+        </p>
+      </Reveal>
+    </ol>
+
+    <Reveal
+      v-if="page.experience.cv"
+      class="mt-12"
+    >
+      <AppButton
+        :to="page.experience.cv.to || '#'"
+        :label="page.experience.cv.label"
+        :target="page.experience.cv.target"
+        variant="outline"
+        size="sm"
+      />
+    </Reveal>
+  </section>
+</template>

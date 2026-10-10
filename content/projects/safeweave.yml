@@ -1,7 +1,8 @@
-title: SafeWeave — Construction Safety & RAMS Platform
-description: Compliance platform for construction safety workflows, digitizing site inductions, RAMS, and document approvals. Implemented robust RBAC, full audit trails, and AI-assisted document verification to automate reporting and improve regulatory compliance for high-risk environments.
-image: https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1470&auto=format&fit=crop&q=80
+title: SafeWeave
+summary: A construction safety platform that digitises site inductions, RAMS and document approvals.
+description: Compliance platform for high-risk construction sites. Digitises inductions, RAMS and document approvals with role-based access, full audit trails and AI-assisted document verification that automates reporting.
 url: "https://safeweave-main-jpsyxp.laravel.cloud/"
 repository: "https://github.com/VincentNdegwa/safeweave"
-tags: ["Laravel", "RBAC", "Audit Trail", "Document Control", "Compliance", "Safety"]
+order: 5
+tags: ["Laravel", "RBAC", "Audit trail", "Compliance"]
 date: "2024"

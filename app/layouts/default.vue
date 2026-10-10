@@ -1,12 +1,18 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <div>
-    <UContainer class="sm:border-x border-default pt-10">
-      <AppHeader :links="navLinks" />
+  <div class="min-h-dvh bg-canvas text-ink">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-on-accent"
+    >
+      Skip to content
+    </a>
+    <AppHeader />
+    <main
+      id="main"
+      class="overflow-x-clip"
+    >
       <slot />
-      <AppFooter />
-    </UContainer>
+    </main>
+    <AppFooter />
   </div>
 </template>

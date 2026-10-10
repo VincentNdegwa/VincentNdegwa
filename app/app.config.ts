@@ -1,9 +1,11 @@
 export default defineAppConfig({
   global: {
+    name: 'Vincent Ndegwa',
+    role: 'Software and AI Engineer',
     picture: {
       dark: '/personal/profile.jpeg',
       light: '/personal/profile.jpeg',
-      alt: 'Vincent — Full-Stack Engineer'
+      alt: 'Portrait of Vincent Ndegwa'
     },
     meetingLink: 'https://cal.com/vincent-ndegwa',
     email: 'ndegwavincent7@gmail.com',
@@ -11,30 +13,39 @@ export default defineAppConfig({
   },
   ui: {
     colors: {
-      primary: 'violet',
-      neutral: 'zinc'
+      primary: 'pine',
+      neutral: 'sage'
     },
-    pageHero: {
+    button: {
       slots: {
-        container: 'py-18 sm:py-24 lg:py-32',
-        title: 'mx-auto max-w-xl text-pretty text-3xl sm:text-4xl lg:text-5xl',
-        description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted'
+        base: 'rounded-full font-semibold'
       }
     }
   },
   footer: {
-    credits: `Vincent Ndegwa • Full-Stack Engineer & AI Engineer © ${new Date().getFullYear()}`,
-    colorMode: false,
     links: [{
+      'label': 'GitHub',
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/vincentNdegwa',
+      'to': 'https://github.com/VincentNdegwa',
       'target': '_blank',
       'aria-label': 'GitHub'
     }, {
+      'label': 'LinkedIn',
       'icon': 'i-simple-icons-linkedin',
       'to': 'https://www.linkedin.com/in/vincentndegwa01/',
       'target': '_blank',
       'aria-label': 'LinkedIn'
+    }, {
+      'label': 'X',
+      'icon': 'i-simple-icons-x',
+      'to': 'https://x.com/SWE_Vincent',
+      'target': '_blank',
+      'aria-label': 'X'
+    }, {
+      'label': 'Notes',
+      'icon': 'i-lucide-notebook-pen',
+      'to': '/blog',
+      'aria-label': 'Notes'
     }]
   }
 })

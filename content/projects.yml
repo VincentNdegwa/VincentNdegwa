@@ -1,6 +1,13 @@
-title: Selected Projects and Case Studies
-description: Production systems across AI, FinTech, and enterprise SaaS. These projects highlight scalable architecture, Stripe-powered payment workflows, and measurable performance gains in real-world environments.
+title: Projects
+description: Production systems across AI, FinTech and SaaS, from client platforms under NDA to products I run myself.
+seo:
+  title: Projects
+  description: Production systems by Vincent Ndegwa across AI, FinTech and SaaS, with live links and source code where available.
 links:
-  - label: "Let's talk"
-    color: "neutral"
-  - label: 'Email me'
+  - label: "Book a call"
+    to: "https://cal.com/vincent-ndegwa"
+    target: "_blank"
+    variant: "solid"
+  - label: "Email me"
+    to: "mailto:ndegwavincent7@gmail.com"
+    variant: "outline"

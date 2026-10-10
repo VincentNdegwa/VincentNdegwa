@@ -29,9 +29,16 @@ const createAuthorSchema = () => z.object({
   avatar: createImageSchema().optional()
 })
 
-const createTestimonialSchema = () => z.object({
-  quote: z.string(),
-  author: createAuthorSchema()
+const createMetricSchema = () => z.object({
+  value: z.string(),
+  label: z.string()
+})
+
+// A section headline with an optional emphasised tail, rendered in italic accent.
+const createHeadingSchema = () => z.object({
+  title: z.string(),
+  highlight: z.string().optional(),
+  description: z.string().optional()
 })
 
 export default defineContentConfig({
@@ -41,38 +48,65 @@ export default defineContentConfig({
       source: 'index.yml',
       schema: z.object({
         hero: z.object({
+          status: z.string(),
+          unavailableStatus: z.string().optional(),
+          headline: z.string(),
+          highlight: z.string().optional(),
+          intro: z.string(),
           links: z.array(createButtonSchema()),
-          images: z.array(createImageSchema())
+          image: createImageSchema()
         }),
-        about: createBaseSchema(),
-        experience: createBaseSchema().extend({
+        tools: z.object({
+          title: z.string(),
+          rows: z.array(z.array(z.object({
+            name: z.string(),
+            icon: z.string().editor({ input: 'icon' }).optional()
+          })))
+        }),
+        about: createHeadingSchema().extend({
+          stats: z.array(createMetricSchema()),
+          process: z.object({
+            title: z.string(),
+            steps: z.array(z.object({
+              title: z.string(),
+              description: z.string()
+            }))
+          })
+        }),
+        work: createHeadingSchema().extend({
+          link: createButtonSchema().optional()
+        }),
+        experience: createHeadingSchema().extend({
           items: z.array(z.object({
             date: z.string(),
+            current: z.boolean().optional(),
             position: z.string(),
-            location: z.string().optional(),
-            highlights: z.array(z.string()).optional(),
+            summary: z.string(),
             company: z.object({
               name: z.string(),
-              url: z.string(),
-              logo: z.string().editor({ input: 'icon' }),
-              color: z.string()
+              url: z.string().optional()
             })
-          }))
+          })),
+          cv: createButtonSchema().optional()
         }),
-        testimonials: z.array(createTestimonialSchema()),
-        blog: createBaseSchema(),
-        faq: createBaseSchema().extend({
-          categories: z.array(
-            z.object({
-              title: z.string().nonempty(),
-              questions: z.array(
-                z.object({
-                  label: z.string().nonempty(),
-                  content: z.string().nonempty()
-                })
-              )
-            }))
-        })
+        lab: createHeadingSchema().extend({
+          now: z.object({
+            title: z.string(),
+            items: z.array(z.string())
+          }),
+          repos: z.array(z.object({
+            name: z.string(),
+            description: z.string(),
+            stack: z.string(),
+            url: z.string()
+          })),
+          github: z.object({
+            label: z.string(),
+            username: z.string(),
+            url: z.string()
+          })
+        }),
+        contact: createBaseSchema()
       })
     }),
     projects: defineCollection({
@@ -80,10 +114,15 @@ export default defineContentConfig({
       source: 'projects/*.yml',
       schema: z.object({
         title: z.string().nonempty(),
+        summary: z.string().nonempty(),
         description: z.string().nonempty(),
-        image: z.string().nonempty().editor({ input: 'media' }),
+        image: z.string().editor({ input: 'media' }).optional(),
         url: z.string().optional(),
         repository: z.string().optional(),
+        confidential: z.boolean().optional(),
+        featured: z.boolean().optional(),
+        order: z.number().optional(),
+        metrics: z.array(createMetricSchema()).optional(),
         tags: z.array(z.string()),
         date: z.date()
       })

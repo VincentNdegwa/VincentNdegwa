@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { MotionConfig } from 'motion-v'
+
 const colorMode = useColorMode()
 
-const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
+const color = computed(() => colorMode.value === 'dark' ? '#0E1513' : '#F2F4F0')
 
 useHead({
   meta: [
@@ -18,9 +20,12 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Vincent | Full-Stack Engineer',
-  ogImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80',
-  twitterImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80',
+  titleTemplate: (title?: string) => {
+    if (!title) return 'Vincent Ndegwa | Software and AI Engineer'
+    return title.includes('Vincent Ndegwa') ? title : `${title} | Vincent Ndegwa`
+  },
+  ogImage: '/personal/profile.jpeg',
+  twitterImage: '/personal/profile.jpeg',
   twitterCard: 'summary_large_image'
 })
 
@@ -41,15 +46,17 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     transform: data => data.flat()
   })
 ])
+
+provide('navigation', navigation)
 </script>
 
 <template>
   <UApp>
-    <NuxtLayout>
-      <UMain class="relative">
+    <MotionConfig reduced-motion="user">
+      <NuxtLayout>
         <NuxtPage />
-      </UMain>
-    </NuxtLayout>
+      </NuxtLayout>
+    </MotionConfig>
 
     <ClientOnly>
       <LazyUContentSearch

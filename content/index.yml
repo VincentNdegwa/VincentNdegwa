@@ -1,120 +1,145 @@
 seo:
-  title: "Vincent Ndegwa - Senior Software Engineer (Full-Stack & AI Systems)"
-  description: "Portfolio of Vincent Ndegwa, a senior software engineer with 6+ years of experience building scalable web and AI-powered systems using Laravel, NestJS, FastAPI, Next.js, and Nuxt."
-title: "Hey, I'm Vincent Ndegwa Senior Software Engineer (Full-Stack & AI Systems)"
-description: "I modernize legacy platforms into high-performance microservices and AI-powered products using Laravel, Node.js (NestJS/Express), Python (FastAPI/Django), React (Next.js), and Vue (Nuxt)."
+  title: "Vincent Ndegwa | Software and AI Engineer"
+  description: "Vincent Ndegwa is a software and AI engineer who builds scalable software applications and AI products: full-stack platforms, payment systems, RAG pipelines and LLM features."
+title: "Vincent Ndegwa"
+description: "Software and AI engineer building scalable software applications and AI products."
+
 hero:
+  status: "Available for new roles and projects"
+  unavailableStatus: "Not taking on new work right now"
+  headline: "I build scalable software and"
+  highlight: "AI products."
+  intro: "I'm Vincent, a software and AI engineer with six years shipping platforms, payments and LLM features for teams worldwide."
   links:
-    - label: "Let's work together"
-      to: "#contact"
-      color: "neutral"
-  images:
-    - src: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=80
-      alt: Code on a terminal
-    - src: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&auto=format&fit=crop&q=80
-      alt: Programming workspace
-    - src: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80
-      alt: Laptop with code
-    - src: https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&auto=format&fit=crop&q=80
-      alt: Data analytics dashboard
-    - src: https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&auto=format&fit=crop&q=80
-      alt: Code editor open
-    - src: https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&auto=format&fit=crop&q=80
-      alt: Developer at work
-    - src: https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=80
-      alt: MacBook with code
-    - src: https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80
-      alt: Matrix-style code
-    - src: https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&auto=format&fit=crop&q=80
-      alt: Developer coding
+    - label: "View work"
+      to: "#work"
+      variant: "solid"
+    - label: "Book a call"
+      to: "https://cal.com/vincent-ndegwa"
+      variant: "outline"
+      target: "_blank"
+  image:
+    src: /personal/profile.jpeg
+    alt: Portrait of Vincent Ndegwa
+
+tools:
+  title: "Tools I build with"
+  rows:
+    - - { name: "OpenAI", icon: "i-simple-icons-openai" }
+      - { name: "Anthropic", icon: "i-simple-icons-anthropic" }
+      - { name: "LangChain", icon: "i-simple-icons-langchain" }
+      - { name: "LangGraph" }
+      - { name: "LlamaIndex" }
+      - { name: "Hugging Face", icon: "i-simple-icons-huggingface" }
+      - { name: "Ollama", icon: "i-simple-icons-ollama" }
+      - { name: "pgvector" }
+      - { name: "Pinecone" }
+      - { name: "Elasticsearch", icon: "i-simple-icons-elasticsearch" }
+      - { name: "Microsoft Foundry" }
+      - { name: "Azure" }
+      - { name: "Python", icon: "i-simple-icons-python" }
+      - { name: "FastAPI", icon: "i-simple-icons-fastapi" }
+    - - { name: "Laravel", icon: "i-simple-icons-laravel" }
+      - { name: "Django", icon: "i-simple-icons-django" }
+      - { name: "Node.js", icon: "i-simple-icons-nodedotjs" }
+      - { name: "NestJS", icon: "i-simple-icons-nestjs" }
+      - { name: "Vue 3", icon: "i-simple-icons-vuedotjs" }
+      - { name: "Nuxt", icon: "i-simple-icons-nuxt" }
+      - { name: "React", icon: "i-simple-icons-react" }
+      - { name: "Next.js", icon: "i-simple-icons-nextdotjs" }
+      - { name: "TypeScript", icon: "i-simple-icons-typescript" }
+      - { name: "PostgreSQL", icon: "i-simple-icons-postgresql" }
+      - { name: "MySQL", icon: "i-simple-icons-mysql" }
+      - { name: "Redis", icon: "i-simple-icons-redis" }
+      - { name: "Docker", icon: "i-simple-icons-docker" }
+      - { name: "GitHub Actions", icon: "i-simple-icons-githubactions" }
+      - { name: "Google Cloud", icon: "i-simple-icons-googlecloud" }
+
 about:
-  title: "About Me"
-  description: |
-    Senior software engineer with 6+ years of experience building scalable web and AI-powered systems. I specialize in Laravel, NestJS, FastAPI, React/Next.js, and Vue/Nuxt, with strong focus on microservices, performance optimization, and production reliability.
-    I integrate LLMs, RAG pipelines, and automation into business-critical software to deliver measurable outcomes across ERP, FinTech, and SaaS platforms.
+  title: "Reliable systems first. Then AI"
+  highlight: "where it earns its place."
+  stats:
+    - value: "6+"
+      label: "years building in production"
+    - value: "10+"
+      label: "products shipped for clients"
+    - value: "10k+"
+      label: "concurrent users served"
+    - value: "MSc"
+      label: "in Artificial Intelligence"
+  process:
+    title: "How I work"
+    steps:
+      - title: "Understand"
+        description: "Start with the problem and the people it affects, then find what is really slowing them down."
+      - title: "Architect"
+        description: "Design services, data and queues that hold up under load, with AI added only where it measurably helps."
+      - title: "Ship"
+        description: "Tested, containerised and deployed through CI, then watched in production until the numbers move."
+
+work:
+  title: "Work I'm"
+  highlight: "proud of"
+  description: "Four products, each measured by what it changed for the people using it."
+  link:
+    label: "All projects"
+    to: "/projects"
+
 experience:
-  title: Work Experience
+  title: "Experience"
   items:
-    - position: "Senior Software Engineer"
-      date: "Feb 2024 – Present"
-      location: "USA (Remote)"
-      highlights:
-        - "Led development of a multi-tenant POS and ERP platform handling high-concurrency writes from 100+ retail terminals simultaneously."
-        - "Optimized complex MySQL execution plans, reducing report generation latency from minutes to seconds in large-scale workflows."
-        - "Implemented Stripe and Stripe Connect payment flows for marketplace-style split payments and subscription billing across ERP commerce modules."
-        - "Integrated AI-powered analytics for predictive inventory insights and automated business data categorization."
-        - "Containerized the application ecosystem with Docker and established CI/CD pipelines in GitHub Actions for stable, high-frequency releases."
-        - "Built compliance and document tracking engines with Laravel Queues processing 10k+ daily records with real-time alerting."
+    - date: "2024 - Now"
+      current: true
+      position: "Senior Software Engineer"
       company:
-        name: Paysoko Systems
-        logo: "i-heroicons-building-storefront"
+        name: "Paysoko Systems"
         url: "https://paysoko.com"
-        color: "#7c3aed"
-    - position: "Senior Full-Stack & AI Lead"
-      date: "Nov 2021 – Jan 2024"
-      location: "USA (Remote)"
-      highlights:
-        - "Architected an NLP-driven sentiment analysis engine using Laravel and OpenAI, reducing manual feedback processing by 40 minutes per batch."
-        - "Transitioned legacy services to NestJS and implemented a high-performance API gateway, reducing API response times by 150ms."
-        - "Developed an escrow-backed payment system supporting 5,000+ monthly transactions using Node.js and WebSockets."
-        - "Engineered a personalized grocery recommendation engine with Python and Django that scaled to 10k+ concurrent users during peak load."
-        - "Directed AI-driven internal automation workflows that reduced operational overhead by 20 hours per week."
-        - "Led architecture scoping and planning with cross-functional teams to deliver resilient software systems."
+      summary: "Lead engineer on a multi-tenant ERP and POS platform: Stripe Connect payments and subscriptions, real-time data, AI-driven inventory forecasting and automated delivery pipelines."
+    - date: "2021 - 2024"
+      position: "Senior Full-Stack and AI Lead"
       company:
-        name: Forward Velocity
-        logo: "i-heroicons-globe-alt"
-        url: "#"
-        color: "#0ea5e9"
-    - position: "Full-Stack Developer (Independent Contractor)"
-      date: "Jan 2020 – Oct 2021"
-      location: "San Francisco, USA (Remote)"
-      highlights:
-        - "Shipped 10+ production-ready applications for a technical consultancy focused on rapid-growth startup ventures."
-        - "Built high-performance, SEO-optimized frontends with React and Next.js for client-facing platforms."
-        - "Developed data-intensive backends using Django and FastAPI to deliver high throughput and efficient retrieval."
-        - "Implemented rigorous TDD practices and automated Playwright UI tests, achieving 95% code coverage across critical modules."
+        name: "Forward Velocity"
+      summary: "Led full-stack and AI work across several products. Moved core services to NestJS behind an API gateway and built automation that saved the team about 20 hours a week."
+    - date: "2020 - 2021"
+      position: "Freelance Software Engineer"
       company:
-        name: StackLogic Inc.
-        logo: "i-heroicons-code-bracket-square"
-        url: "#"
-        color: "#f97316"
-blog:
-  title: "Latest Articles"
-  description: "Technical deep-dives, engineering lessons, and things I wish I'd read earlier"
-faq:
-  title: Frequently Asked Questions
-  description: Insights into my engineering process, technical philosophy, and collaboration models.
-  categories:
-    - title: Engineering & Expertise
-      questions:
-        - label: What is your primary area of expertise?
-          content: |
-            I am a Full-Stack Software Engineer specializing in high-performance enterprise systems (ERP/POS) and Applied AI. I bridge the gap between robust backend architecture (Laravel/Django) and intelligent automation (LLMs/RAG). My goal is to transform complex business logic into scalable, AI-enhanced software.
-        - label: Can you lead the integration of AI into existing platforms?
-          content: |
-            Yes. Beyond standard web development, I specialize in "AI Retrofitting." This involves building RAG (Retrieval-Augmented Generation) pipelines, fine-tuning models for specific business datasets, and creating Python-based microservices that interface seamlessly with Laravel or Node.js backends.
-        - label: Are you comfortable with legacy code and refactoring?
-          content: |
-            Absolutely. I have extensive experience jumping into established codebases to identify bottlenecks, optimize database queries, and implement modern design patterns. I prioritize "stability-first" refactoring, ensuring that performance improves without disrupting current production workflows.
-    - title: Collaboration & Process
-      questions:
-        - label: How do you approach a new project or role?
-          content: |
-            I follow a "Discovery-First" approach. I start by auditing the current technical debt, infrastructure, and business requirements. For engineering roles, I focus on CI/CD maturity, test coverage (Pest/Cypress), and system scalability to ensure the team can ship high-quality code at speed.
-        - label: What is your preferred engagement model?
-          content: |
-            I am primarily looking for high-impact Full-Stack or AI Engineering roles within forward-thinking organizations. I am also open to selective, long-term strategic consulting where architectural oversight and AI implementation are required. 
-        - label: How do you handle project timelines and delivery?
-          content: |
-            I work with milestone-based delivery. By breaking down complex features into iterative sprints, I ensure stakeholders have full visibility. I utilize Docker for environment parity and automated pipelines to ensure that "ready" means "production-grade."
-        - label: Do you provide technical leadership or mentorship?
-          content: |
-            Yes. Having worked across cross-functional teams, I value clean code practices, detailed documentation, and peer code reviews. I believe a Senior Engineer’s success is measured by the growth and velocity of the entire engineering team.
-    - title: Background & Research
-      questions:
-        - label: How does your MSc in AI influence your engineering work?
-          content: |
-            My research at the Open University of Kenya focuses on Applied ML and Intelligent Automation. This allows me to move beyond using AI as a "black box" and instead architect custom solutions—like sentiment-based routing or predictive inventory engines—that are grounded in mathematical theory and data science best practices.
-        - label: What tools are currently in your "Daily Driver" stack?
-          content: |
-            For production, I lean on Laravel 11 (Octane), Nuxt 3, and PostgreSQL. For AI and Data pipelines, I use Python (FastAPI/LangChain) and Vector Databases like Pinecone. My infrastructure is managed via Docker and GitHub Actions, with a strong focus on Redis for caching and real-time state management.
+        name: "Independent"
+      summary: "Designed and shipped 10+ production apps for clients worldwide, from React and Next.js frontends to Django and FastAPI backends."
+    - date: "2023 - 2025"
+      position: "MSc Artificial Intelligence"
+      company:
+        name: "Open University of Kenya"
+      summary: "Applied machine learning and intelligent automation: the theory behind the AI features I ship."
+
+lab:
+  title: "Built"
+  highlight: "after hours"
+  description: "Side projects and experiments from my GitHub."
+  now:
+    title: "Now working on"
+    items:
+      - "Agentic workflows with LangChain and LangGraph."
+      - "Vector search in pgvector, Pinecone, Chroma and FAISS."
+      - "Retrieval strategies for production RAG."
+      - "Bridging classic software engineering with modern AI systems."
+  repos:
+    - name: "SafeWeave"
+      description: "Construction safety platform for site inductions and RAMS approvals, with full audit trails and AI-assisted document checks."
+      stack: "Laravel, RBAC"
+      url: "https://github.com/VincentNdegwa/safeweave"
+    - name: "ValidTrack"
+      description: "Tracks insurance and certification expiry, scanning thousands of records daily and alerting before documents lapse."
+      stack: "Laravel, Queues"
+      url: "https://github.com/VincentNdegwa/validtrack"
+    - name: "fin-data-pipeline"
+      description: "Scripts and notebooks that clean and analyse financial transaction data."
+      stack: "Python, Jupyter"
+      url: "https://github.com/VincentNdegwa/fin-data-pipeline"
+  github:
+    label: "@VincentNdegwa on GitHub"
+    username: "VincentNdegwa"
+    url: "https://github.com/VincentNdegwa"
+
+contact:
+  title: "Let's build something that scales."
+  description: "Open to senior engineering roles, contracts and AI product work."

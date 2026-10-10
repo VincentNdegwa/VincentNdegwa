@@ -19,18 +19,16 @@ useSeoMeta({
 </script>
 
 <template>
-  <UPage v-if="page">
+  <div v-if="page">
     <LandingHero :page />
-    <UPageSection
-      :ui="{
-        container: '!pt-0 lg:grid lg:gap-8'
-      }"
-    >
-      <LandingAbout :page />
-      <LandingWorkExperience :page />
-    </UPageSection>
-    <LandingBlog :page />
-    <LandingSkills />
-    <LandingFAQ :page />
-  </UPage>
+    <LandingTools :page />
+    <LandingAbout :page />
+    <LandingWork :page />
+    <LandingWorkExperience :page />
+    <LandingLab :page />
+    <LandingContact
+      :title="page.contact.title"
+      :description="page.contact.description"
+    />
+  </div>
 </template>

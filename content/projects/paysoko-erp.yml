@@ -1,6 +1,15 @@
-title: Paysoko ERP & POS Platform (NDA)
-description: Led development of a multi-tenant ERP and POS platform handling high-concurrency writes from 100+ retail terminals. Optimized MySQL reporting pipelines from minutes to seconds, implemented Stripe and Stripe Connect payment workflows for split payments and subscriptions, and streamlined releases through Docker and GitHub Actions CI/CD.
-image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1470&auto=format&fit=crop&q=80
-url: "#"
-tags: ["Laravel", "MySQL", "Redis", "Docker", "CI/CD", "ERP", "Multi-tenant", "POS", "Stripe", "Stripe Connect", "GitHub Actions"]
+title: Multi-tenant ERP and POS platform
+summary: Many businesses run sales, payments and reporting side by side. I rebuilt the reporting path with tuned queries, caching and queues so it stays fast under heavy load.
+description: Led development of a multi-tenant ERP and POS platform for Paysoko Systems, handling high-concurrency writes from 100+ retail terminals. Optimised MySQL reporting pipelines from minutes to seconds, built Stripe and Stripe Connect flows for split payments and subscriptions, and streamlined releases with Docker and GitHub Actions.
+confidential: true
+featured: true
+order: 1
+metrics:
+  - value: Seconds
+    label: report generation, down from minutes
+  - value: 10k+
+    label: records processed every day
+  - value: 100+
+    label: terminals on one platform
+tags: ["Laravel", "MySQL", "Redis", "Stripe Connect", "Docker"]
 date: "2024"

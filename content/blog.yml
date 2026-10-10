@@ -1,2 +1,6 @@
-title: Latest Articles
-description: Technical deep-dives, engineering lessons, and things I wish I'd read earlier.
+title: Notes
+description: Technical deep dives, engineering lessons and things I wish I had read earlier.
+seo:
+  title: Notes
+  description: Technical writing by Vincent Ndegwa on Laravel, databases, performance and integrating LLMs into production software.
+links: []

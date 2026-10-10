@@ -1,36 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Geist+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 @import "@nuxt/ui";
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @source "../../../content/**/*";
 
 @theme static {
-  --font-sans: 'Space Grotesk', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-serif: 'Instrument Serif', serif;
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Brand accent: deep pine teal. 900 is the light-mode accent, 400 the dark-mode accent. */
+  --color-pine-50: #F0F7F5;
+  --color-pine-100: #DAEDE8;
+  --color-pine-200: #B6DCD2;
+  --color-pine-300: #86D3C3;
+  --color-pine-400: #62C6B2;
+  --color-pine-500: #36A48F;
+  --color-pine-600: #1E8070;
+  --color-pine-700: #166457;
+  --color-pine-800: #11554C;
+  --color-pine-900: #0E4A43;
+  --color-pine-950: #072B27;
+
+  /* Neutral: green-tinted greys so the page reads as one palette. */
+  --color-sage-50: #F7F9F7;
+  --color-sage-100: #F2F4F0;
+  --color-sage-200: #E4EBE7;
+  --color-sage-300: #D2DAD6;
+  --color-sage-400: #B3C0BB;
+  --color-sage-500: #8A9893;
+  --color-sage-600: #56635F;
+  --color-sage-700: #36443F;
+  --color-sage-800: #1C2A27;
+  --color-sage-900: #151F1D;
+  --color-sage-950: #0E1513;
 }
 
-.dot-grid {
-  background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.dark .dot-grid {
-  background-image: radial-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px);
-}
-
+/* Design tokens (light) */
 :root {
-  --ui-container: var(--container-4xl);
+  --vn-bg: #F2F4F0;
+  --vn-surface: #FFFFFF;
+  --vn-surface-2: #E4EBE7;
+  --vn-ink: #13201C;
+  --vn-ink-2: #36443F;
+  --vn-ink-3: #56635F;
+  --vn-line: #D2DAD6;
+  --vn-line-strong: #B3C0BB;
+  --vn-accent: #0E4A43;
+  --vn-on-accent: #F2F4F0;
+  --vn-on-accent-2: #BFD6D0;
+  --vn-accent-soft: #CFE2DC;
+  --vn-shadow: 0 24px 48px -28px rgb(14 74 67 / 0.35);
+
+  /* Nuxt UI semantic tokens mapped onto the same palette */
+  --ui-primary: var(--vn-accent);
+  --ui-bg: var(--vn-bg);
+  --ui-bg-muted: var(--vn-surface-2);
+  --ui-bg-elevated: var(--vn-surface);
+  --ui-bg-accented: var(--vn-line);
+  --ui-bg-inverted: var(--vn-ink);
+  --ui-text: var(--vn-ink-2);
+  --ui-text-dimmed: var(--vn-ink-3);
+  --ui-text-muted: var(--vn-ink-3);
+  --ui-text-toned: var(--vn-ink-2);
+  --ui-text-highlighted: var(--vn-ink);
+  --ui-text-inverted: var(--vn-bg);
+  --ui-border: var(--vn-line);
+  --ui-border-muted: var(--vn-line);
+  --ui-border-accented: var(--vn-line-strong);
+  --ui-border-inverted: var(--vn-ink);
+  /* Nuxt UI derives every rounded-* utility from this (rounded-3xl = 6x), so keep Tailwind's base. */
+  --ui-radius: 0.25rem;
+  --ui-container: 1360px;
 
   ::selection {
-    color: #282a30;
-    background-color: #c8c8c8;
+    color: var(--vn-on-accent);
+    background-color: var(--vn-accent);
   }
 }
 
+/* Design tokens (dark) */
 .dark {
-  ::selection {
-    color: #ffffff;
-    background-color: #474747;
+  --vn-bg: #0E1513;
+  --vn-surface: #151F1D;
+  --vn-surface-2: #1C2A27;
+  --vn-ink: #E7EEEB;
+  --vn-ink-2: #BCC8C4;
+  --vn-ink-3: #93A29E;
+  --vn-line: #25332F;
+  --vn-line-strong: #3A4B47;
+  --vn-accent: #62C6B2;
+  --vn-on-accent: #0E1513;
+  --vn-on-accent-2: #2C6B60;
+  --vn-accent-soft: #1D3A35;
+  --vn-shadow: 0 24px 48px -28px rgb(0 0 0 / 0.7);
+}
+
+@theme inline {
+  --color-canvas: var(--vn-bg);
+  --color-surface: var(--vn-surface);
+  --color-surface-2: var(--vn-surface-2);
+  --color-ink: var(--vn-ink);
+  --color-ink-2: var(--vn-ink-2);
+  --color-ink-3: var(--vn-ink-3);
+  --color-line: var(--vn-line);
+  --color-line-strong: var(--vn-line-strong);
+  --color-accent: var(--vn-accent);
+  --color-on-accent: var(--vn-on-accent);
+  --color-on-accent-2: var(--vn-on-accent-2);
+  --color-accent-soft: var(--vn-accent-soft);
+  --shadow-soft: var(--vn-shadow);
+}
+
+@utility wrap {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 48px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--vn-bg);
+  color: var(--vn-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--vn-accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Tools marquee: one band, two rows moving in opposite directions, paused on hover. */
+.marquee-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee-track--reverse {
+  animation-direction: reverse;
+  animation-duration: 72s;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Card hover: lift plus arrow turn, motion only on transform. */
+.lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--vn-shadow);
+}
+
+.lift .lift-arrow {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lift:hover .lift-arrow {
+  transform: rotate(45deg);
+}
+
+/* Long-form content (about page, articles) */
+.prose-vn {
+  color: var(--vn-ink-2);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.prose-vn > * + * {
+  margin-top: 1.1em;
+}
+
+.prose-vn h2,
+.prose-vn h3 {
+  color: var(--vn-ink);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-top: 2.2em;
+}
+
+.prose-vn h2 {
+  font-size: 1.75rem;
+}
+
+.prose-vn h3 {
+  font-size: 1.375rem;
+}
+
+.prose-vn strong {
+  color: var(--vn-ink);
+  font-weight: 600;
+}
+
+.prose-vn a {
+  color: var(--vn-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-vn ul {
+  list-style: disc;
+  padding-left: 1.25em;
+}
+
+.prose-vn ol {
+  list-style: decimal;
+  padding-left: 1.25em;
+}
+
+.prose-vn li + li {
+  margin-top: 0.4em;
+}
+
+.prose-vn code:not(pre code) {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--vn-surface-2);
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+}
+
+.prose-vn blockquote {
+  border-left: 2px solid var(--vn-line-strong);
+  padding-left: 1em;
+  color: var(--vn-ink-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .lift,
+  .lift .lift-arrow {
+    transition: none;
+  }
+
+  .lift:hover {
+    transform: none;
   }
 }

@@ -1,7 +1,13 @@
-title: Telliqo — AI-Powered Reputation Management
-description: NLP-driven sentiment analysis engine built with Laravel and OpenAI to automate customer feedback classification. Routes negative sentiment to internal dashboards and positive sentiment to public review channels, reducing manual processing time by 40 minutes per batch.
+title: Telliqo
+summary: AI reputation management that reads customer feedback, routes complaints to the team and sends praise to public review channels.
+description: An NLP-driven sentiment engine built with Laravel and OpenAI that classifies customer feedback automatically. Negative feedback goes to internal dashboards and positive feedback to public review channels, cutting manual processing by 40 minutes per batch.
 image: /images/telliqo.png
 url: "https://telliqo-main-9crnhf.laravel.cloud/"
 repository: "https://github.com/VincentNdegwa/telliqo"
-tags: ["Laravel", "Vue.js", "Inertia.js", "NLP", "Sentiment Analysis", "AI", "OpenAI"]
+featured: true
+order: 2
+metrics:
+  - value: 40 min
+    label: saved on every feedback batch
+tags: ["OpenAI", "NLP", "Laravel", "Vue.js", "Inertia.js"]
 date: "2024"

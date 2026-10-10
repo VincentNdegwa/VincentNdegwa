@@ -1,36 +1,37 @@
-title: About Me
-description: Senior software engineer with 6+ years of experience building scalable web and AI-powered systems across ERP, FinTech, and SaaS.
+title: About
+description: A software and AI engineer who builds scalable software applications and AI products for teams and clients worldwide.
+seo:
+  title: About
+  description: About Vincent Ndegwa, a software and AI engineer with six years of experience building scalable platforms, payment systems and production AI features.
 content: |
-  Hey, I'm **Vincent Ndegwa**, a Senior Software Engineer focused on Full-Stack and AI systems. I have 6+ years of experience building production software used by teams in retail, finance, and creator-economy platforms.
+  I'm **Vincent Ndegwa**, a software and AI engineer. For six years I have built production software used by teams in retail, finance and the creator economy, and today I focus on scalable applications and the AI features that make them more useful.
 
-  My core backend stack includes **PHP (Laravel)**, **Node.js (NestJS/Express)**, and **Python (FastAPI/Django)**. On the frontend, I build with **React (Next.js)** and **Vue (Nuxt)**. I specialize in modernizing legacy platforms into high-performance microservices, optimizing database performance, and shipping reliable APIs at scale.
+  My backend work spans **PHP (Laravel)**, **Node.js (NestJS and Express)** and **Python (FastAPI and Django)**. On the frontend I build with **Vue (Nuxt)** and **React (Next.js)**. Much of my work is turning slow, tangled systems into fast, dependable services: tuning databases, introducing queues and caches, and shipping APIs that hold up at scale.
 
-  At Paysoko Systems, I have led architecture for a multi-tenant ERP and POS platform, optimized high-volume MySQL reporting pipelines, and delivered payment workflows with **Stripe** and **Stripe Connect** for split payments and subscriptions.
+  At Paysoko Systems I lead engineering on a multi-tenant ERP and POS platform, from high-volume MySQL reporting to **Stripe** and **Stripe Connect** flows for split payments and subscriptions.
 
-  ### The AI Thread
+  ### The AI thread
 
-  I hold an **MSc in Artificial Intelligence (2023-2025)** from the Open University of Kenya. My AI work includes NLP pipelines, LLM orchestration, RAG-enabled systems, and predictive analytics applied to production business workflows.
+  I studied for an **MSc in Artificial Intelligence** at the Open University of Kenya. My AI work covers NLP pipelines, LLM orchestration, retrieval-augmented generation and predictive analytics, always applied to real business workflows.
 
-  This is practical engineering, not experimentation for its own sake: I have built sentiment analysis engines, recommendation systems, and AI-driven process automation that reduce manual effort and improve operational speed.
+  It is practical engineering rather than experiments for their own sake: sentiment engines, recommendation systems and AI-driven automation that cut manual effort and speed up operations.
 
-  ### Engineering Philosophy
+  ### How I build
 
-  I believe in **clean architecture first**: explicit service boundaries, testable modules, and observability from day one. A system that performs well but cannot evolve safely is a long-term risk.
+  **Clean architecture first.** Explicit service boundaries, testable modules and observability from day one. A system that performs well but cannot evolve safely is a long-term risk.
 
-  I take DevOps seriously too. The systems I ship include **Dockerized environments**, **CI/CD pipelines**, and robust release practices designed for distributed teams and high-availability requirements.
+  I take delivery seriously too. The systems I ship come with **Docker environments**, **CI/CD pipelines** and release practices built for distributed teams.
 
   ### Education
 
-  - **MSc Artificial Intelligence** — Open University of Kenya *(2023-2025)*
-  - **BSc Software Engineering** — Kirinyaga University
+  - **MSc Artificial Intelligence**, Open University of Kenya (2023 - 2025)
+  - **BSc Software Engineering**, Kirinyaga University
 
-  ### Beyond the Terminal
+  ### Beyond the terminal
 
-  When I'm not in a codebase, I'm experimenting with local LLMs via Ollama, following football, or writing technical articles to crystallise what I've learned.
+  When I'm not in a codebase I'm running local LLMs with Ollama, following football, or writing notes to make sense of what I've learned.
 
-  Browse my [projects](/projects) or [get in touch](mailto:vincentndegwa.dev@gmail.com) — I'm always open to interesting problems.
+  Browse my [projects](/projects) or [book a call](https://cal.com/vincent-ndegwa). I'm always open to interesting problems.
 images:
-  - src: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1587&auto=format&fit=crop&q=80
-    alt: Code on a dark terminal
-  - src: https://images.unsplash.com/photo-1518770660439-4636190af475?w=1587&auto=format&fit=crop&q=80
-    alt: Circuit board close-up
+  - src: /personal/profile.jpeg
+    alt: Portrait of Vincent Ndegwa
