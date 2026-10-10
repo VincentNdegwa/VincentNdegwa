@@ -25,7 +25,11 @@ useSeoMeta({
     return title.includes('Vincent Ndegwa') ? title : `${title} | Vincent Ndegwa`
   },
   ogImage: '/personal/profile.jpeg',
+  ogImageAlt: 'Portrait of Vincent Ndegwa',
   twitterImage: '/personal/profile.jpeg',
+  twitterImageAlt: 'Portrait of Vincent Ndegwa',
+  twitterSite: '@SWE_Vincent',
+  twitterCreator: '@SWE_Vincent',
   twitterCard: 'summary_large_image'
 })
 

@@ -18,6 +18,10 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description,
   ogDescription: page.value?.seo?.description || page.value?.description
 })
+
+useSchemaOrg([
+  defineWebPage({ '@type': 'ProfilePage' })
+])
 </script>
 
 <template>

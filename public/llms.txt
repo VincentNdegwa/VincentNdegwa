@@ -1,0 +1,24 @@
+# Vincent Ndegwa
+
+> Vincent Ndegwa is a software and AI engineer with six years of experience building scalable software applications and AI products: full-stack platforms, payment systems, RAG pipelines and LLM features. He leads engineering on a multi-tenant ERP and POS platform at Paysoko Systems and holds an MSc in Artificial Intelligence from the Open University of Kenya.
+
+## Pages
+
+- [Home](https://vincentndegwa.com/): Overview, tools, selected work, experience and contact
+- [About](https://vincentndegwa.com/about): Background, education and how Vincent builds software
+- [Projects](https://vincentndegwa.com/projects): Production systems across AI, FinTech and SaaS
+- [Notes](https://vincentndegwa.com/blog): Technical writing on Laravel, databases, performance and LLM integration
+
+## Notes
+
+- [How I Cut Report Generation from 30s to 2s in Laravel](https://vincentndegwa.com/blog/laravel-report-generation-30s-to-2s)
+- [Integrating LLMs into Laravel Using Python Microservices](https://vincentndegwa.com/blog/integrating-llms-into-laravel-python-microservices)
+- [Why I Chose PostgreSQL Over MongoDB for a CRM Reporting Engine](https://vincentndegwa.com/blog/postgresql-vs-mongodb-crm-reporting)
+- [GitHub Actions CI/CD for Laravel: A Zero-Downtime Deployment Setup](https://vincentndegwa.com/blog/github-actions-laravel-zero-downtime-deployment)
+
+## Contact
+
+- Email: ndegwavincent7@gmail.com
+- Book a call: https://cal.com/vincent-ndegwa
+- GitHub: https://github.com/VincentNdegwa
+- LinkedIn: https://www.linkedin.com/in/vincentndegwa01/

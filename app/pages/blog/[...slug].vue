@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
-import { findPageBreadcrumb } from '@nuxt/content/utils'
-
 const route = useRoute()
 
 const { data: page } = await useAsyncData(route.path, () =>
@@ -15,30 +11,41 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
   })
 )
 
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
-const blogNavigation = computed(() => navigation.value?.find(item => item.path === '/blog')?.children || [])
-
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
-
-if (page.value.image) {
-  defineOgImage({ url: page.value.image })
-} else {
-  defineOgImageComponent('Blog', {
-    headline: breadcrumb.value.map(item => item.label).join(' > ')
-  }, {
-    fonts: ['Geist:400', 'Geist:600']
-  })
-}
-
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
+
+// Crop the cover to the 1200x630 social card size so the declared dimensions are true.
+const ogImageUrl = (() => {
+  const url = new URL(page.value.image, 'https://vincentndegwa.com')
+  url.searchParams.set('w', '1200')
+  url.searchParams.set('h', '630')
+  url.searchParams.set('fit', 'crop')
+  return url.toString()
+})()
 
 useSeoMeta({
   title,
   description,
   ogDescription: description,
-  ogTitle: title
+  ogTitle: title,
+  ogType: 'article',
+  ogImage: { url: ogImageUrl, width: 1200, height: 630, alt: page.value.title },
+  twitterImage: { url: ogImageUrl, alt: page.value.title },
+  articlePublishedTime: new Date(page.value.date).toISOString(),
+  articleAuthor: ['https://vincentndegwa.com/about']
 })
+
+useSchemaOrg([
+  defineWebPage({ description }),
+  defineArticle({
+    '@type': 'BlogPosting',
+    'headline': page.value.title,
+    description,
+    'image': ogImageUrl,
+    'datePublished': new Date(page.value.date).toISOString(),
+    'timeRequired': page.value.minRead ? `PT${page.value.minRead}M` : undefined
+  })
+])
 
 const copyLink = () => {
   copyToClipboard(window.location.href, 'Article link copied to clipboard')
@@ -75,7 +82,10 @@ const formatDate = (dateString: string | Date) => {
         class="mt-8 flex flex-col gap-5"
       >
         <p class="font-mono text-[13px] text-ink-3">
-          <span v-if="page.date">{{ formatDate(page.date) }}</span><span v-if="page.minRead"> · {{ page.minRead }} min read</span>
+          <time
+            v-if="page.date"
+            :datetime="new Date(page.date).toISOString().slice(0, 10)"
+          >{{ formatDate(page.date) }}</time><span v-if="page.minRead"> · {{ page.minRead }} min read</span>
         </p>
         <h1 class="text-[clamp(36px,4.6vw,60px)] font-semibold leading-[1.08] tracking-[-0.025em] text-ink [font-stretch:85%]">
           {{ page.title }}
